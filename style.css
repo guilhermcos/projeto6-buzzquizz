@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.display-none {
+    display: none;
+}
+
+header {
+    background-color: #EC362D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 69px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header>h1 {
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 43px;
+}
+
+main {
+    margin-top: 69px;
+}
