@@ -9,7 +9,7 @@ function getQuizzes () {
         let quizzInfo = res.data;
         quizzInfo.forEach( res => {
             quizzList.innerHTML += `
-            <div class="quizz" onclick="openId(this)">
+            <div id=${res.id} class="quizz" onclick="openId(this)">
             <img src="${res.image}">
             <div class="quizz-overlay"></div>
             <h2>${res.title}</h2>
