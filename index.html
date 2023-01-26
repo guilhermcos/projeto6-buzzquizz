@@ -16,22 +16,78 @@
 <header>
     <h1>BuzzQuizz</h1>
 </header>
-<main>
-    <div class="home-page">
-        <div class="create-a-quizz">
-            <p>Você não criou nenhum<br>
-            quizz ainda :(</p>
-            <button class="create-btn">Criar Quizz</button>
-        </div>
-        <div class="quizzes-container">
-            <h1>Todos os Quizzes</h1>
-            <div class="quizzes-part">
-            </div>
-        </div>
-    </div>
-</main>
 
 <body>
+    <main>
+        <div class="home-page display-none">
+            <div class="create-a-quizz">
+                <p>Você não criou nenhum<br>
+                    quizz ainda :(</p>
+                <button class="create-btn">Criar Quizz</button>
+            </div>
+            <div class="quizzes-container">
+                <h1>Todos os Quizzes</h1>
+                <div class="quizzes-part">
+                </div>
+            </div>
+        </div>
+
+        <div class="quizz-page">
+            <div class="quizz-title">
+                <img src="https://img.quizur.com/f/img60229135637eb5.97078183.jpg?lastEdited=1612878137" alt="">
+                <div class="overlay"></div>
+                <h1>O quão Potterhead é você?</h1>
+            </div>
+            <div class="quizz-questions">
+                <div class="quizz-question">
+                    <div class="question">
+                        <h2>Em que episódio ocorre o casamento de Monica e Chandler?</h2>
+                    </div>
+                    <div class="answers">
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
+                                alt="">
+                            <p>S07E24 Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x23/Friends-Season-7-Episode-23-7-5489.jpg"
+                                alt="">
+                            <p>S07E24</p>
+                        </div>
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
+                                alt="">
+                            <p>S07E24</p>
+                        </div>
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
+                                alt="">
+                            <p>S07E24</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quizz-final">
+                <div class="final-text">
+                    <h2>Bastante</h2>
+                </div>
+                <div class="final-img-text">
+                    <img src="https://www.tvinsider.com/wp-content/uploads/2020/06/friends-joey-chandler-rachel-monica.jpg"
+                        alt="">
+                    <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button-reinicio">
+                    <p>Reiniciar Quizz</p>
+                </div>
+                <div class="button-voltar">
+                    <p>Voltar pra home</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts.js"></script>
 </body>
