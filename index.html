@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="style.css">
     <title>BuzzQuizz</title>
 </head>
-<header>
-    <h1>BuzzQuizz</h1>
-</header>
 
 <body>
+    <header>
+        <h1>BuzzQuizz</h1>
+    </header>
     <main>
         <div class="home-page display-none">
             <div class="create-a-quizz">
@@ -74,7 +74,8 @@
                 <div class="final-img-text">
                     <img src="https://www.tvinsider.com/wp-content/uploads/2020/06/friends-joey-chandler-rachel-monica.jpg"
                         alt="">
-                    <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
+                    <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão
+                        abaixo para usar o vira-tempo e reiniciar este teste.</p>
                 </div>
             </div>
             <div class="buttons">
@@ -85,6 +86,43 @@
                     <p>Voltar pra home</p>
                 </div>
             </div>
+        </div>
+
+        <div class="home-page display-none"> <!--Adicionado a calsse "display-none" para fazer a tela 3-->
+            <div class="top-part">
+                <div class="create-a-quizz">
+                    <p>Você não criou nenhum<br>
+                        quizz ainda :(</p>
+                    <button class="create-btn">Criar Quizz</button>
+                </div>
+            </div>
+            <div class="quizzes-container">
+                <h2>Todos os Quizzes</h2>
+                <div class="quizzes-part">
+                </div>
+            </div>
+        </div>
+
+        <!--Formatação da tela 3-->
+        <div class="tela-3 display-none">
+
+            <div class="info-basica-quizz">
+
+                <p class="comece-pelo-começo">Comece pelo começo</p>
+                <div class="caixa-dos-inputs">
+                    <input class="inputs-padrao-tela-3 titulo-quizz" type="text" placeholder="Título do seu quizz">
+                    <input class="inputs-padrao-tela-3 url-quizz" type="text" placeholder="URL da imagem do seu quizz">
+                    <input class="inputs-padrao-tela-3 qtde-perguntas-quizz" type="text"
+                        placeholder="Quantidade de perguntas do quizz">
+                    <input class="inputs-padrao-tela-3 qtde-niveis-quizz" type="text"
+                        placeholder="Quantidade de níveis do quizz">
+                </div>
+
+                <button class="botao-info-quizz" onclick="prosseguirCriarPerguntas(this)">Prosseguir pra criar
+                    perguntas</button>
+
+            </div>
+
         </div>
 
     </main>
