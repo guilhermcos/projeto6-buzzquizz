@@ -19,6 +19,8 @@
         <h1>BuzzQuizz</h1>
     </header>
     <main>
+
+        <!--Incio da home page-->
         <div class="home-page">
             <div class="top-part">
                 <div class="user-quizz display-none">
@@ -26,102 +28,199 @@
                         <h2>Seus Quizzes</h2>
                         <button onclick="openCreateQuizzWindow()"><ion-icon name="add-circle"></ion-icon></button>
                     </div>
-                    <div class="user-quizzes">
-                    </div>
-                    </div>
-                    <div class="create-a-quizz">
-                        <p>Você não criou nenhum<br>
-                            quizz ainda :(</p>
-                        <button class="create-btn" onclick="openCreateQuizzWindow()">Criar Quizz</button>
-                    </div>
                 </div>
-                <div class="quizzes-container">
-                    <h2>Todos os Quizzes</h2>
-                    <div class="quizzes-part">
-                    </div>
+                <div class="create-a-quizz">
+                    <p>Você não criou nenhum<br>
+                        quizz ainda :(</p>
+                    <button class="create-btn" onclick="openCreateQuizzWindow()">Criar Quizz</button>
                 </div>
             </div>
+            <div class="quizzes-container">
+                <h2>Todos os Quizzes</h2>
+                <div class="quizzes-part">
+                </div>
+            </div>
+        </div>
+        <!--Fim da home page-->
 
-            <div class="quizz-page display-none">
-                <div class="quizz-title">
-                    <img src="https://img.quizur.com/f/img60229135637eb5.97078183.jpg?lastEdited=1612878137" alt="">
-                    <div class="overlay"></div>
-                    <h1>O quão Potterhead é você?</h1>
-                </div>
-                <div class="quizz-questions">
-                    <div class="quizz-question">
-                        <div class="question">
-                            <h2>Em que episódio ocorre o casamento de Monica e Chandler?</h2>
+        <!--Incio da tela do quizz selecionado-->
+        <div class="quizz-page display-none">
+            <div class="quizz-title">
+                <img src="https://img.quizur.com/f/img60229135637eb5.97078183.jpg?lastEdited=1612878137" alt="">
+                <div class="overlay"></div>
+                <h1>O quão Potterhead é você?</h1>
+            </div>
+            <div class="quizz-questions">
+                <div class="quizz-question">
+                    <div class="question">
+                        <h2>Em que episódio ocorre o casamento de Monica e Chandler?</h2>
+                    </div>
+                    <div class="answers">
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
+                                alt="">
+                            <p>S07E24 Lorem ipsum dolor sit amet.</p>
                         </div>
-                        <div class="answers">
-                            <div class="answer">
-                                <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
-                                    alt="">
-                                <p>S07E24 Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="answer">
-                                <img src="https://s3cf.recapguide.com:444/img/tv/24/7x23/Friends-Season-7-Episode-23-7-5489.jpg"
-                                    alt="">
-                                <p>S07E24</p>
-                            </div>
-                            <div class="answer">
-                                <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
-                                    alt="">
-                                <p>S07E24</p>
-                            </div>
-                            <div class="answer">
-                                <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
-                                    alt="">
-                                <p>S07E24</p>
-                            </div>
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x23/Friends-Season-7-Episode-23-7-5489.jpg"
+                                alt="">
+                            <p>S07E24</p>
                         </div>
-                    </div>
-                </div>
-                <div class="quizz-final">
-                    <div class="final-text">
-                        <h2>Bastante</h2>
-                    </div>
-                    <div class="final-img-text">
-                        <img src="https://www.tvinsider.com/wp-content/uploads/2020/06/friends-joey-chandler-rachel-monica.jpg"
-                            alt="">
-                        <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão
-                            abaixo para usar o vira-tempo e reiniciar este teste.</p>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <div class="button-reinicio">
-                        <p>Reiniciar Quizz</p>
-                    </div>
-                    <div class="button-voltar">
-                        <p>Voltar pra home</p>
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
+                                alt="">
+                            <p>S07E24</p>
+                        </div>
+                        <div class="answer">
+                            <img src="https://s3cf.recapguide.com:444/img/tv/24/7x24/Friends-Season-7-Episode-24-2-e9d3.jpg"
+                                alt="">
+                            <p>S07E24</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="quizz-final">
+                <div class="final-text">
+                    <h2>Bastante</h2>
+                </div>
+                <div class="final-img-text">
+                    <img src="https://www.tvinsider.com/wp-content/uploads/2020/06/friends-joey-chandler-rachel-monica.jpg"
+                        alt="">
+                    <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão
+                        abaixo para usar o vira-tempo e reiniciar este teste.</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button-reinicio">
+                    <p>Reiniciar Quizz</p>
+                </div>
+                <div class="button-voltar">
+                    <p>Voltar pra home</p>
+                </div>
+            </div>
+        </div>
+        <!--Fim da tela do quizz selecionado-->
+
         <!--Formatação da tela 3-->
+        <!--Inicio da tela "Info Basica do Quiz"-->
         <div class="tela-3 display-none">
 
-                <div class="info-basica-quizz">
+            <div class="info-basica-quiz formatacao-padrao-tela-3">
 
-                    <p class="comece-pelo-começo">Comece pelo começo</p>
-                    <div class="caixa-dos-inputs">
-                        <input class="inputs-padrao-tela-3 titulo-quizz" type="text" placeholder="Título do seu quizz">
-                        <input class="inputs-padrao-tela-3 url-quizz" type="text" placeholder="URL da imagem do seu quizz">
-                        <input class="inputs-padrao-tela-3 qtde-perguntas-quizz" type="text"
-                            placeholder="Quantidade de perguntas do quizz">
-                        <input class="inputs-padrao-tela-3 qtde-niveis-quizz" type="text"
-                            placeholder="Quantidade de níveis do quizz">
-                    </div>
+                <p class="paragrafos-tela-3">Comece pelo começo</p>
 
-                    <button class="botao-info-quizz" onclick="prosseguirCriarPerguntas(this)">Prosseguir pra criar
-                        perguntas</button>
+                <div class="caixa-dos-inputs">
+
+                    <input class="inputs-padrao-tela-3 titulo-quizz" type="text" placeholder="Título do seu quizz">
+
+                    <input class="inputs-padrao-tela-3 url-quizz" type="text" placeholder="URL da imagem do seu quizz">
+
+                    <input class="inputs-padrao-tela-3 qtde-perguntas-quizz" type="text"
+                        placeholder="Quantidade de perguntas do quizz">
+
+                    <input class="inputs-padrao-tela-3 qtde-niveis-quizz" type="text"
+                        placeholder="Quantidade de níveis do quizz">
 
                 </div>
 
+                <button class="botao-criar-perguntas" onclick="prosseguirCriarPerguntas(this)">Prosseguir pra criar
+                    perguntas</button>
+
+            </div>
+            <!--Fim da tela "Info Basica do Quiz"-->
+
+            <!--Inicio da tela "Perguntas do Quiz"-->
+            <div class="criar-perguntas formatacao-padrao-tela-3 display-none">
+
+                <p class="paragrafos-tela-3">Crie suas perguntas</p>
+
+                <div class="caixa-primeira-pergunta">
+
+                    <p class="paragrafos-tela-3">Pergunta 1</p>
+
+                    <input class="inputs-padrao-tela-3 texto-da-pergunta marginBottom-tela3" type="text"
+                        placeholder="Texto da pergunta">
+
+                    <input class="inputs-padrao-tela-3 cor-de-fundo-pegunta" type="text"
+                        placeholder="Cor de fundo da pergunta">
+
+
+                    <p class="paragrafos-tela-3 paddingTop-tela3">Resposta correta</p>
+
+                    <input class="inputs-padrao-tela-3 resposta-correta marginBottom-tela3" type="text"
+                        placeholder="Resposta correta">
+
+                    <input class="inputs-padrao-tela-3 url-correta" type="text" placeholder="URL da imagem">
+
+
+                    <p class="paragrafos-tela-3 paddingTop-tela3">Respostas incorretas</p>
+
+                    <input class="inputs-padrao-tela-3 incorreta-um marginBottom-tela3" type="text"
+                        placeholder="Resposta incorreta 1">
+
+                    <input class="inputs-padrao-tela-3 url-incorreta-um margintBottom32" type="text"
+                        placeholder="URL da imagem 1">
+
+
+                    <input class="inputs-padrao-tela-3 incorreta-dois marginBottom-tela3" type="text"
+                        placeholder="Resposta incorreta 2">
+
+                    <input class="inputs-padrao-tela-3 url-incorreta-dois margintBottom32" type="text"
+                        placeholder="URL da imagem 2">
+
+
+                    <input class="inputs-padrao-tela-3 incorreta-tres marginBottom-tela3" type="text"
+                        placeholder="Resposta incorreta 3">
+
+                    <input class="inputs-padrao-tela-3 url-incorreta-tres" type="text" placeholder="URL da imagem 3">
+
+
+                </div>
+
+                <div class="caixa-segunda-pergunta">
+
+                    <p class="perguntaMinimizada">Pergunta 2</p>
+
+                    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+                        viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
+                            fill="black" />
+                    </svg>
+
+                </div>
+
+                <div class="caixa-terceira-pergunta">
+
+                    <p class="perguntaMinimizada">Pergunta 3</p>
+
+                    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+                        viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
+                            fill="black" />
+                    </svg>
+
+                </div>
+
+                <button class="botao-criar-niveis" onclick="prosseguirCriarNiveis(this)">Prosseguir pra criar
+                    níveis</button>
+
+            </div>
+            <!--Fim da tela "Perguntas do Quiz"-->
+
+            <!--Inicio da tela "Niveis do Quiz"-->
+            <div class="criar-niveis formatacao-padrao-tela-3 display-none">
+
+
             </div>
 
+        </div>
+        <!--Fim da formatação da tela 3-->
+
     </main>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="./scripts.js"></script>
 </body>
 
