@@ -44,15 +44,27 @@ function prosseguirCriarPerguntas() {
 
     const telaCriarPeguntas = document.querySelector('.criar-perguntas');
     telaCriarPeguntas.classList.remove('display-none');
+
 }
 
 //Função que avança para tela de criar niveis
 function prosseguirCriarNiveis() {
+    window.scroll(0, 0,)
+
     const telaCriarPerguntas = document.querySelector('.criar-perguntas');
     telaCriarPerguntas.classList.add('display-none');
 
     const telaCriarNiveis = document.querySelector('.criar-niveis');
     telaCriarNiveis.classList.remove('display-none');
+}
+
+//Função que avança para tela Finalizar Quizz
+function FinalizarQuizz() {
+    const telaCriarNiveis = document.querySelector('.criar-niveis');
+    telaCriarNiveis = telaCriarNiveis.classList.add('display-none');
+
+    const telaFinalizarQuizz = document.querySelector('.finalizar-quizz');
+    telaFinalizarQuizz.classList.remove('display-none');
 }
 
 function getUnicQuizz() {
