@@ -143,6 +143,7 @@ main {
     color: #fff;
 }
 
+/*Inicio da tela 3*/
 
 /*Tela 3 : Info basica do quizz*/
 .tela-3 {
@@ -168,7 +169,6 @@ main {
     background-color: #FFFFFF;
     width: 600px;
     height: 256px;
-    margin-bottom: 85px;
     box-shadow: 0px 0px 10px 0px #0000000D;
 
     display: flex;
@@ -194,12 +194,14 @@ main {
     line-height: 22px;
 }
 
-.botao-criar-peguntas {
+.botao-criar-perguntas {
     background-color: #EC362D;
     width: 368px;
     height: 54px;
     border-radius: 15px;
     border: none;
+    margin-top: 85px;
+    cursor: pointer;
 
     font-weight: 400;
     font-size: 21px;
@@ -255,6 +257,24 @@ main {
 
 .editar-pergunta {
     margin-right: 17px;
+    cursor: pointer;
+}
+
+.botao-criar-niveis {
+    background-color: #EC362D;
+    width: 354px;
+    height: 54px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 81px;
+    margin-bottom: 100px;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: Center;
+    color: #FFF5F4;
 }
 
 

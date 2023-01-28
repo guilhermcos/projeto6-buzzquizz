@@ -37,12 +37,22 @@ function openCreateQuizzWindow() {
     //chamar a função da tela 3
 }
 
+//Função que avança para tela de criar perguntas
 function prosseguirCriarPerguntas() {
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
     telaInfoBasicaQuiz.classList.add('display-none');
 
-    const telaCriarPeguntas = document.querySelector('criar-perguntas');
+    const telaCriarPeguntas = document.querySelector('.criar-perguntas');
     telaCriarPeguntas.classList.remove('display-none');
+}
+
+//Função que avança para tela de criar niveis
+function prosseguirCriarNiveis() {
+    const telaCriarPerguntas = document.querySelector('.criar-perguntas');
+    telaCriarPerguntas.classList.add('display-none');
+
+    const telaCriarNiveis = document.querySelector('.criar-niveis');
+    telaCriarNiveis.classList.remove('display-none');
 }
 
 function getUnicQuizz() {
