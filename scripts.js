@@ -22,9 +22,11 @@ function getQuizzes () {
 function openQuizz(selected) {
     const homepage = document.querySelector('.home-page');
     homepage.classList.add('display-none');
+    let tela2 = document.querySelector('.quizz-page');
+    tela2.classList.remove('display-none');
     const id = selected.getAttribute('id');
     const openQuizzId = axios.get(`${url}/${id}`);
-    openQuizzId.then(res => console.log(res.data));
+    openQuizzId.then(res => getUnicQuizz(res.data));
     openQuizzId.catch(() => window.location.reload())
 }
 
