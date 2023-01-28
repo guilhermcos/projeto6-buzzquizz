@@ -21,7 +21,15 @@
     <main>
         <div class="home-page">
             <div class="top-part">
-                <div class="create-a-quizz">
+                <div class="user-quizz display-none">
+                    <div class="new-button">
+                        <h2>Seus Quizzes</h2>
+                        <button onclick="openCreateQuizzWindow()"><ion-icon name="add-circle"></ion-icon></button>
+                    </div>
+                    <div class="user-quizzes">
+                    </div>
+                    </div>
+                    <div class="create-a-quizz">
                         <p>Você não criou nenhum<br>
                             quizz ainda :(</p>
                         <button class="create-btn" onclick="openCreateQuizzWindow()">Criar Quizz</button>
@@ -112,6 +120,7 @@
             </div>
 
     </main>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts.js"></script>
 </body>

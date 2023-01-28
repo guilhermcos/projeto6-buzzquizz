@@ -1,20 +1,20 @@
 const url = 'https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes';
 
-function getQuizzes () {
+function getQuizzes() {
     const quizzes = axios.get(`${url}`);
 
-    quizzes.then (res =>{
+    quizzes.then(res => {
         const quizzList = document.querySelector('.quizzes-part');
         quizzList.innerHTML = '';
         let quizzInfo = res.data;
-        quizzInfo.forEach( res => {
+        quizzInfo.forEach(res => {
             quizzList.innerHTML += `
             <div id=${res.id} class="quizz" onclick="openQuizz(this)">
             <img src="${res.image}">
             <div class="quizz-overlay"></div>
             <h2>${res.title}</h2>
         </div>`
-    })
+        })
     })
     quizzes.catch(() => window.location.reload())
 }
@@ -35,6 +35,14 @@ function openCreateQuizzWindow() {
     homepage.classList.add('display-none');
     const tela3 = document.querySelector('.tela-3').classList.remove('display-none');
     //chamar a função da tela 3
+}
+
+function prosseguirCriarPerguntas() {
+    const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
+    telaInfoBasicaQuiz.classList.add('display-none');
+
+    const telaCriarPeguntas = document.querySelector('criar-perguntas');
+    telaCriarPeguntas.classList.remove('display-none');
 }
 
 function getUnicQuizz() {

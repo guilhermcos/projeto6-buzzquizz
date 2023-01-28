@@ -41,10 +41,10 @@ main {
 }
 
 .home-page {
+    gap:15px;
     margin-top:140px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -81,7 +81,6 @@ main {
 }
 
 .quizzes-container {
-    margin: 50px;
     display:flex;
     flex-direction: column;
     width:1051px;
@@ -141,6 +140,48 @@ main {
     font-weight: 400;
     line-height: 22px;
     color: #fff;
+}
+
+.new-button {
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+    
+.new-button button {
+    width:30px;
+    height:30px;
+    background-color:#fafafa;
+    border:none;
+    outline:none;
+    position:relative;
+    cursor:pointer;
+}
+    
+ion-icon {
+    font-size:30px;
+    color:red;
+    position:absolute;
+    top:0;
+    left:0;
+}
+    
+.new-button h2 {
+    font-size:20px;
+    font-weight:700;
+}
+
+.user-quizz {
+    width:1051px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:15px;
+    }
+    
+.user-quizzes {
+    display:flex;
+    gap:15px;
 }
 
 
@@ -218,26 +259,33 @@ main {
 @media (max-width:1100px) {
 
     .create-a-quizz,
-    .quizzes-container,
-    header {
+    header,
+    .home-page {
         width: 100%;
     }
 
     .top-part,
-    .quizzes-part {
+    .quizzes-part,
+    .quizzes-container,
+    .user-quizz,
+    .new-button {
         width: 90%;
     }
 
-    .home-page,
-    .quizzes-container {
+    .home-page {
         align-items:center;
     }
 
-
-
-    .quizzes-part {
+    .quizzes-part,
+    .user-quizz {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width:370px) {
+    .quizz, .quizzes-part {
+        width:100%;
     }
 }
 
