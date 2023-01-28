@@ -211,12 +211,12 @@ main {
 /* fim Info basica do quizz*/
 
 /* Inicio da tela Criar perguntas */
-.caixa-pergunta-1 {
+.caixa-primeira-pergunta {
     background-color: #FFFFFF;
     width: 600px;
-    margin-bottom: 85px;
     box-shadow: 0px 0px 10px 0px #0000000D;
     padding: 27px 17px;
+    margin-bottom: 24px;
 
     display: flex;
     flex-direction: column;
@@ -233,6 +233,28 @@ main {
 
 .margintBottom32 {
     margin-bottom: 32px;
+}
+
+.perguntaMinimizada {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+}
+
+.caixa-segunda-pergunta,
+.caixa-terceira-pergunta {
+    background-color: #FFFFFF;
+    width: 600px;
+    box-shadow: 0px 0px 10px 0px #0000000D;
+    padding: 27px 17px;
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.editar-pergunta {
+    margin-right: 17px;
 }
 
 
