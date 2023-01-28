@@ -19,7 +19,9 @@
         <h1>BuzzQuizz</h1>
     </header>
     <main>
-        <div class="home-page">
+
+        <!--Incio da home page-->
+        <div class="home-page display-none">
             <div class="top-part">
                 <div class="create-a-quizz">
                     <p>Você não criou nenhum<br>
@@ -33,7 +35,9 @@
                 </div>
             </div>
         </div>
+        <!--Fim da home page-->
 
+        <!--Incio da tela do quizz selecionado-->
         <div class="quizz-page display-none">
             <div class="quizz-title">
                 <img src="https://img.quizur.com/f/img60229135637eb5.97078183.jpg?lastEdited=1612878137" alt="">
@@ -89,12 +93,13 @@
                 </div>
             </div>
         </div>
+        <!--Fim da tela do quizz selecionado-->
 
         <!--Formatação da tela 3-->
         <!--Inicio da tela "Info Basica do Quiz"-->
-        <div class="tela-3 display-none">
+        <div class="tela-3">
 
-            <div class="formatacao-padrao-tela-3 info-basica-quiz">
+            <div class="formatacao-padrao-tela-3 info-basica-quiz display-none">
 
                 <p class="paragrafos-tela-3">Comece pelo começo</p>
 
@@ -119,15 +124,50 @@
             <!--Fim da tela "Info Basica do Quiz"-->
 
             <!--Inicio da tela "Perguntas do Quiz"-->
-            <div class="formatacao-padrao-tela-3 criar-perguntas display-none">
+            <div class="formatacao-padrao-tela-3 criar-perguntas ">
 
                 <p class="paragrafos-tela-3">Crie suas perguntas</p>
 
                 <div class="caixa-pergunta-1">
 
-                    <div class="pergunta-um">
-                        <p class="paragrafos-tela-3">Pergunta 1</p>
-                    </div>
+                    <p class="paragrafos-tela-3">Pergunta 1</p>
+
+                    <input class="inputs-padrao-tela-3 texto-da-pergunta marginBottom-tela3" type="text"
+                        placeholder="Texto da pergunta">
+
+                    <input class="inputs-padrao-tela-3 cor-de-fundo-pegunta" type="text"
+                        placeholder="Cor de fundo da pergunta">
+
+
+                    <p class="paragrafos-tela-3 paddingTop-tela3">Resposta correta</p>
+
+                    <input class="inputs-padrao-tela-3 resposta-correta marginBottom-tela3" type="text"
+                        placeholder="Resposta correta">
+
+                    <input class="inputs-padrao-tela-3 url-correta" type="text" placeholder="URL da imagem">
+
+
+                    <p class="paragrafos-tela-3 paddingTop-tela3">Respostas incorretas</p>
+
+                    <input class="inputs-padrao-tela-3 incorreta-um marginBottom-tela3" type="text"
+                        placeholder="Resposta incorreta 1">
+
+                    <input class="inputs-padrao-tela-3 url-incorreta-um margintBottom32" type="text"
+                        placeholder="URL da imagem 1">
+
+
+                    <input class="inputs-padrao-tela-3 incorreta-dois marginBottom-tela3" type="text"
+                        placeholder="Resposta incorreta 2">
+
+                    <input class="inputs-padrao-tela-3 url-incorreta-dois margintBottom32" type="text"
+                        placeholder="URL da imagem 2">
+
+
+                    <input class="inputs-padrao-tela-3 incorreta-tres marginBottom-tela3" type="text"
+                        placeholder="Resposta incorreta 3">
+
+                    <input class="inputs-padrao-tela-3 url-incorreta-tres" type="text" placeholder="URL da imagem 3">
+
 
                 </div>
 
