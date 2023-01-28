@@ -36,55 +36,55 @@ header>h1 {
 
 main {
     margin-top: 69px;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 .home-page {
-    margin-top:140px;
-    display:flex;
+    margin-top: 140px;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 .create-a-quizz {
-    width:1051px;
-    height:181px;
-    background-color:#fafafa;
+    width: 1051px;
+    height: 181px;
+    background-color: #fafafa;
     border: 1px dashed #d4d4d4;
-    border-radius:5px;
-    display:flex;
+    border-radius: 5px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
 .create-a-quizz p {
-    font-size:20px;
+    font-size: 20px;
     font-weight: 400;
     text-align: center;
-    color:#b9b9b9;
+    color: #b9b9b9;
     line-height: 23px;
 }
 
 .create-btn {
-    width:151px;
-    height:40px;
-    border:1px dashed #ec362d;
-    border-radius:50px;
+    width: 151px;
+    height: 40px;
+    border: 1px dashed #ec362d;
+    border-radius: 50px;
     background-color: #fafafa;
-    color:#EC362D;
-    font-size:21px;
-    font-weight:400px;
+    color: #EC362D;
+    font-size: 21px;
+    font-weight: 400px;
 }
 
 .quizzes-container {
     margin: 50px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    width:1051px;
+    width: 1051px;
 }
 
 .quizzes-container h2 {
@@ -98,7 +98,7 @@ main {
     text-align: left;
     font-weight: 700;
     margin-bottom: 15px;
-    gap:15px;
+    gap: 15px;
 }
 
 .quizzes-part {
@@ -150,14 +150,14 @@ main {
     width: 100%;
 }
 
-.info-basica-quizz {
+.formatacao-padrao-tela-3 {
     padding-top: 71px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.comece-pelo-começo {
+.paragrafos-tela-3 {
     font-weight: 700;
     font-size: 23px;
     line-height: 27px;
@@ -194,7 +194,7 @@ main {
     line-height: 22px;
 }
 
-.botao-info-quizz {
+.botao-criar-peguntas {
     background-color: #EC362D;
     width: 368px;
     height: 54px;
@@ -230,7 +230,7 @@ main {
 
     .home-page,
     .quizzes-container {
-        align-items:center;
+        align-items: center;
     }
 
 
