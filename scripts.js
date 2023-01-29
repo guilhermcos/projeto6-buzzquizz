@@ -22,11 +22,12 @@ function getQuizzes() {
     quizzes.catch(() => window.location.reload())
 }
 function getUnicQuizz(id) {
+    console.log(id);
     const selectedQuizz = `https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${id}`;
     const promise = axios.get(selectedQuizz);
     promise.then(colocaTituloQuizz);
     promise.catch(err);
-    function err {
+    function err () {
         alert("Houve um erro no carregamento do quizz selecionado.");
         voltarHome();
     }
@@ -38,7 +39,7 @@ function openQuizz(selected) {
     tela2.classList.remove('display-none');
     const id = selected.getAttribute('id');
     const openQuizzId = axios.get(`${url}/${id}`);
-    openQuizzId.then(res => getUnicQuizz(res.data));
+    openQuizzId.then(res => getUnicQuizz(res.data.id));
     openQuizzId.catch(() => window.location.reload())
 }
 
@@ -240,7 +241,12 @@ function voltarHome() {
     contadorRespostas = 0;
     quizzPage = document.querySelector('.quizz-page');
     quizzPage.innerHTML = "";
+    const homepage = document.querySelector('.home-page');
+    homepage.classList.remove('display-none');
+    let tela2 = document.querySelector('.quizz-page');
+    tela2.classList.add('display-none');
+    getQuizzes();
+    window.scrollTo(0,0);
 }
 
-getUnicQuizz();
 getQuizzes();
