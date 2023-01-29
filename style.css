@@ -289,7 +289,8 @@ main {
     padding-bottom: 28px;
 }
 
-.pergunta-minimizada {
+.pergunta-minimizada,
+.nivel-minimizado {
     padding-left: 27px;
     font-weight: 700;
     font-size: 20px;
@@ -337,15 +338,6 @@ main {
 /* Fim da tela Criar perguntas */
 
 /* Inicio da tela Criar niveis */
-/*.caixa-primeiro-nivel {
-    background-color: #FFFFFF;
-    width: 600px;
-    box-shadow: 0px 0px 10px 0px #0000000D;
-    padding: 27px 17px;
-    margin-bottom: 24px;
-
-}*/
-
 .pergunta-nivel {
     padding-left: 17px;
     width: 100%;
@@ -382,6 +374,28 @@ main {
 /* Fim da tela Criar niveis */
 
 /* Inicio da tela Quizz criado */
+.bkg-quizz-pronto {
+    width: 500px;
+    height: 266px;
+    position: relative;
+}
+
+.bkg-quizz-pronto img {
+    object-fit: cover;
+    position: relative;
+}
+
+.titulo-quizz-criado {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+    display: flex;
+    position: absolute;
+    left: 23px;
+    bottom: 9px;
+}
 
 .botao-acessar-quizz {
     background-color: #EC362D;
@@ -804,7 +818,7 @@ main {
 }
 
 .preto {
-    color:#000000
+    color: #000000
 }
 
 .filtered {

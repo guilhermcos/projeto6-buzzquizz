@@ -27,7 +27,7 @@ function getUnicQuizz(id) {
     const promise = axios.get(selectedQuizz);
     promise.then(colocaTituloQuizz);
     promise.catch(err);
-    function err () {
+    function err() {
         alert("Houve um erro no carregamento do quizz selecionado.");
         voltarHome();
     }
@@ -61,6 +61,22 @@ function prosseguirCriarPerguntas() {
 
 }
 
+//Função para editar as perguntas do quizz
+function editarSegundaPergunta() {
+    const perguntaMinimizada = document.querySelector('.pergunta-dois-minimizada');
+    perguntaMinimizada.classList.add('display-none');
+
+    const caixaPergunta = document.querySelector('.caixa-segunda-pergunta');
+    caixaPergunta.classList.remove('display-none');
+}
+function editarTerceiraPergunta() {
+    const perguntaMinimizada = document.querySelector('.pergunta-tres-minimizada');
+    perguntaMinimizada.classList.add('display-none');
+
+    const caixaPergunta = document.querySelector('.caixa-terceira-pergunta');
+    caixaPergunta.classList.remove('display-none');
+}
+
 //Função que avança para tela de criar niveis
 function prosseguirCriarNiveis() {
     window.scroll(0, 0,)
@@ -70,6 +86,32 @@ function prosseguirCriarNiveis() {
 
     const telaCriarNiveis = document.querySelector('.criar-niveis');
     telaCriarNiveis.classList.remove('display-none');
+
+    const caixaPergunta = document.querySelector('.caixa-segunda-pergunta');
+    caixaPergunta.classList.add('display-none');
+    const perguntaMinimizada = document.querySelector('.pergunta-dois-minimizada');
+    perguntaMinimizada.classList.remove('display-none');
+
+    const caixaTerceiraPergunta = document.querySelector('.caixa-terceira-pergunta');
+    caixaTerceiraPergunta.classList.add('display-none');
+    const teceiraPerguntaMinimizada = document.querySelector('.pergunta-tres-minimizada');
+    teceiraPerguntaMinimizada.classList.remove('display-none');
+}
+
+//Função para editar os niveis do quizz
+function editarSegundoNivel() {
+    const nivelMinimizado = document.querySelector('.nivel-dois-minimizado');
+    nivelMinimizado.classList.add('display-none');
+
+    const caixaNivel = document.querySelector('.caixa-segundo-nivel');
+    caixaNivel.classList.remove('display-none');
+}
+function editarTerceiroNivel() {
+    const nivelMinimizado = document.querySelector('.nivel-tres-minimizado');
+    nivelMinimizado.classList.add('display-none');
+
+    const caixaNivel = document.querySelector('.caixa-terceiro-nivel');
+    caixaNivel.classList.remove('display-none');
 }
 
 //Função que avança para tela Finalizar Quizz
@@ -79,6 +121,16 @@ function finalizarQuizz() {
 
     const telaFinalizarQuizz = document.querySelector('.finalizar-quizz');
     telaFinalizarQuizz.classList.remove('display-none');
+
+    const caixanNivel = document.querySelector('.caixa-segundo-nivel');
+    caixanNivel.classList.add('display-none');
+    const segundoNivelMinimizado = document.querySelector('.nivel-dois-minimizado');
+    segundoNivelMinimizado.classList.remove('display-none');
+
+    const caixaTerceiroNivel = document.querySelector('.caixa-terceiro-nivel');
+    caixaTerceiroNivel.classList.add('display-none');
+    const teceiraNivelMinimizado = document.querySelector('.nivel-tres-minimizado');
+    teceiraNivelMinimizado.classList.remove('display-none');
 }
 
 function colocaTituloQuizz(quizz) {
@@ -245,8 +297,11 @@ function voltarHome() {
     homepage.classList.remove('display-none');
     let tela2 = document.querySelector('.quizz-page');
     tela2.classList.add('display-none');
+    const telaFinalizarQuizz = document.querySelector('.finalizar-quizz');
+    telaFinalizarQuizz.classList.add('display-none');
+    const tela3 = document.querySelector('.tela-3').classList.add('display-none');
     getQuizzes();
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 }
 
 getQuizzes();
