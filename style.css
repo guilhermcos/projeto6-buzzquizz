@@ -195,6 +195,7 @@ main {
 }
 
 .formatacao-padrao-tela-3 {
+    width: 100%;
     padding-top: 71px;
     display: flex;
     flex-direction: column;
@@ -446,6 +447,33 @@ main {
         flex-direction: column;
         align-items: center;
     }
+
+    .inputs-infos-basicas,
+    .caixa-primeira-pergunta,
+    .caixa-segunda-pergunta,
+    .caixa-terceira-pergunta,
+    .caixa-primeiro-nivel,
+    .caixa-segundo-nivel,
+    .caixa-terceiro-nivel,
+    .box-minimizada {
+        width: 100%;
+    }
+
+    .inputs-padrao-tela-3 {
+        width: 341px;
+        height: 46px;
+    }
+
+    .bkg-quizz-pronto {
+        width: 340px;
+        height: 181px;
+    }
+
+    .bkg-quizz-pronto img {
+        width: 340px;
+        height: 181px;
+    }
+
 }
 
 @media (max-width:370px) {
@@ -454,6 +482,7 @@ main {
     .quizzes-part {
         width: 100%;
     }
+
 }
 
 
