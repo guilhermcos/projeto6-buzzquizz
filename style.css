@@ -36,55 +36,55 @@ header>h1 {
 
 main {
     margin-top: 69px;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 .home-page {
-    margin-top:140px;
-    display:flex;
+    margin-top: 140px;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 .create-a-quizz {
-    width:1051px;
-    height:181px;
-    background-color:#fafafa;
+    width: 1051px;
+    height: 181px;
+    background-color: #fafafa;
     border: 1px dashed #d4d4d4;
-    border-radius:5px;
-    display:flex;
+    border-radius: 5px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
 .create-a-quizz p {
-    font-size:20px;
+    font-size: 20px;
     font-weight: 400;
     text-align: center;
-    color:#b9b9b9;
+    color: #b9b9b9;
     line-height: 23px;
 }
 
 .create-btn {
-    width:151px;
-    height:40px;
-    border:1px dashed #ec362d;
-    border-radius:50px;
+    width: 151px;
+    height: 40px;
+    border: 1px dashed #ec362d;
+    border-radius: 50px;
     background-color: #fafafa;
-    color:#EC362D;
-    font-size:21px;
-    font-weight:400px;
+    color: #EC362D;
+    font-size: 21px;
+    font-weight: 400px;
 }
 
 .quizzes-container {
     margin: 50px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    width:1051px;
+    width: 1051px;
 }
 
 .quizzes-container h2 {
@@ -98,7 +98,7 @@ main {
     text-align: left;
     font-weight: 700;
     margin-bottom: 15px;
-    gap:15px;
+    gap: 15px;
 }
 
 .quizzes-part {
@@ -230,7 +230,7 @@ main {
 
     .home-page,
     .quizzes-container {
-        align-items:center;
+        align-items: center;
     }
 
 
@@ -346,6 +346,10 @@ main {
     height: 175px;
 }
 
+.answer:hover {
+    cursor: pointer;
+}
+
 .answer>p {
     margin-top: 10px;
     font-family: Roboto;
@@ -439,12 +443,20 @@ main {
     justify-content: center;
 }
 
+.button-reinicio:hover {
+    cursor: pointer;
+}
+
 .button-voltar {
     width: 220px;
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button-voltar:hover {
+    cursor: pointer;
 }
 
 .button-voltar>p {
@@ -493,7 +505,7 @@ main {
     .answer>img {
         object-fit: cover;
         width: calc(98%);
-        height: auto;
+        height: 75%;
     }
 
     .answer>p {
@@ -578,4 +590,20 @@ main {
 
 .display-none {
     display: none;
+}
+
+.correta {
+    color: #009C22;
+}
+
+.incorreta {
+    color: #FF0B0B;
+}
+
+.preto {
+    color:#000000
+}
+
+.filtered {
+    opacity: 30%;
 }
