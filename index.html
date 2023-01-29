@@ -105,7 +105,7 @@
         <!--Inicio da tela "Info Basica do Quiz"-->
         <div class="tela-3 display-none">
 
-            <div class="info-basica-quiz formatacao-padrao-tela-3">
+            <div class="info-basica-quiz formatacao-padrao-tela-3 display-none">
 
                 <p class="paragrafos-tela-3">Comece pelo começo</p>
 
@@ -221,14 +221,14 @@
                     </div>
 
                     <div class="inputs-niveis">
-                        <input class="inputs-padrao-tela-3 titulo-quizz" type="text" placeholder="Título do nível">
+                        <input class="inputs-padrao-tela-3 titulo-nivel" type="text" placeholder="Título do nível">
 
-                        <input class="inputs-padrao-tela-3 url-quizz" type="text" placeholder="% de acerto mínima">
+                        <input class="inputs-padrao-tela-3 porcentagem-acerto" type="text"
+                            placeholder="% de acerto mínima">
 
-                        <input class="inputs-padrao-tela-3 qtde-perguntas-quizz" type="text"
-                            placeholder="URL da imagem do nível">
+                        <input class="inputs-padrao-tela-3 url-nivel" type="text" placeholder="URL da imagem do nível">
 
-                        <input class="inputs-padrao-tela-3 qtde-niveis-quizz" type="text"
+                        <input class="inputs-padrao-tela-3 descricao-nivel" type="text"
                             placeholder="Descrição do nível">
                     </div>
 
@@ -247,7 +247,7 @@
 
                 </div>
 
-                <div class="caixa-terceiro-nivel">
+                <div class="caixa-terceiro-nivel ">
 
                     <p class="perguntaMinimizada">Nível 3</p>
 
@@ -259,7 +259,7 @@
                     </svg>
                 </div>
 
-                <button class="botao-finalizar-quizz" onclick="FinalizarQuizz(this)">Finalizar Quizz</button>
+                <button class="botao-finalizar-quizz" onclick="finalizarQuizz(this)">Finalizar Quizz</button>
 
             </div>
             <!--Fim da tela "Niveis do Quiz"-->
@@ -267,6 +267,15 @@
             <!--Inicio da tela "Finalizar Quiz"-->
             <div class="finalizar-quizz formatacao-padrao-tela-3 display-none">
 
+                <p class="paragrafos-tela-3">Seu quizz está pronto!</p>
+
+                <!--inserir pelo js a imagem do quizz-->
+
+                <button class="botao-acessar-quizz" onclick="acessarQuizz(this)">Acessar Quizz</button>
+
+                <div class="button-voltar" onclick="acessarQuizz(this)">
+                    <p>Voltar pra home</p>
+                </div>
             </div>
             <!--Fim da tela "Finalizar Quiz"-->
 

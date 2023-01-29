@@ -34,6 +34,7 @@ function openCreateQuizzWindow() {
     const homepage = document.querySelector('.home-page');
     homepage.classList.add('display-none');
     const tela3 = document.querySelector('.tela-3').classList.remove('display-none');
+    const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz').classList.remove('display-none');
     //chamar a função da tela 3
 }
 
@@ -59,9 +60,9 @@ function prosseguirCriarNiveis() {
 }
 
 //Função que avança para tela Finalizar Quizz
-function FinalizarQuizz() {
+function finalizarQuizz() {
     const telaCriarNiveis = document.querySelector('.criar-niveis');
-    telaCriarNiveis = telaCriarNiveis.classList.add('display-none');
+    telaCriarNiveis.classList.add('display-none');
 
     const telaFinalizarQuizz = document.querySelector('.finalizar-quizz');
     telaFinalizarQuizz.classList.remove('display-none');

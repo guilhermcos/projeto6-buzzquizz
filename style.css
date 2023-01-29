@@ -368,6 +368,26 @@ main {
 
 /* Fim da tela Criar niveis */
 
+/* Inicio da tela Quizz criado */
+
+.botao-acessar-quizz {
+    background-color: #EC362D;
+    width: 220px;
+    height: 44px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 75px;
+    margin-bottom: 9px;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: Center;
+    color: #FFF5F4;
+}
+
+/* Fim da tela Quizz criado */
 
 .display-none {
     display: none;
@@ -613,6 +633,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .button-voltar>p {
