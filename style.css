@@ -50,45 +50,45 @@ main {
 
 
 .new-button {
-    display:flex;
+    display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
 .new-button button {
-    width:30px;
-    height:30px;
-    background-color:#fafafa;
-    border:none;
-    outline:none;
-    position:relative;
-    cursor:pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
 }
 
 .new-button ion-icon {
-    font-size:30px;
-    color:red;
-    position:absolute;
-    top:0;
-    left:0;
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .new-button h2 {
-    font-size:20px;
-    font-weight:700;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .user-quizz {
-    width:1051px;
-    display:flex;
+    width: 1051px;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap:15px;
+    gap: 15px;
 }
 
 .user-quizzes {
-    display:flex;
-    gap:15px;
+    display: flex;
+    gap: 15px;
 }
 
 .create-a-quizz {
@@ -237,7 +237,7 @@ main {
     line-height: 22px;
 }
 
-.botao-criar-peguntas {
+.botao-criar-perguntas {
     background-color: #EC362D;
     width: 368px;
     height: 54px;
@@ -304,6 +304,23 @@ main {
     margin-right: 17px;
 }
 
+.botao-criar-niveis {
+    background-color: #EC362D;
+    width: 324px;
+    height: 54px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 75px;
+    margin-bottom: 100px;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: Center;
+    color: #FFF5F4;
+}
+
 /* Fim da tela Criar perguntas */
 
 /* Inicio da tela Criar niveis */
@@ -357,6 +374,7 @@ main {
 }
 
 @media (max-width:1100px) {
+
     .create-a-quizz,
     header,
     .home-page {
@@ -372,7 +390,7 @@ main {
     }
 
     .home-page {
-        align-items:center;
+        align-items: center;
     }
 
     .quizzes-part,
@@ -383,9 +401,11 @@ main {
 }
 
 @media (max-width:370px) {
-.quizz, .quizzes-part {
-width:100%;
-}
+
+    .quizz,
+    .quizzes-part {
+        width: 100%;
+    }
 }
 
 
