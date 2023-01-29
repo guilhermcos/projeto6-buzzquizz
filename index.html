@@ -54,18 +54,18 @@
 
             <div class="info-basica-quiz formatacao-padrao-tela-3 display-none">
 
-                <p class="paragrafos-tela-3">Comece pelo começo</p>
+                <p class="descricao-tela">Comece pelo começo</p>
 
-                <div class="caixa-dos-inputs">
+                <div class="inputs-infos-basicas">
 
-                    <input class="inputs-padrao-tela-3 titulo-quizz" type="text" placeholder="Título do seu quizz">
+                    <input class="titulo-quizz inputs-padrao-tela-3" type="text" placeholder="Título do seu quizz">
 
-                    <input class="inputs-padrao-tela-3 url-quizz" type="text" placeholder="URL da imagem do seu quizz">
+                    <input class="url-quizz inputs-padrao-tela-3" type="text" placeholder="URL da imagem do seu quizz">
 
-                    <input class="inputs-padrao-tela-3 qtde-perguntas-quizz" type="text"
+                    <input class="qtde-perguntas-quizz inputs-padrao-tela-3" type="text"
                         placeholder="Quantidade de perguntas do quizz">
 
-                    <input class="inputs-padrao-tela-3 qtde-niveis-quizz" type="text"
+                    <input class="qtde-niveis-quizz inputs-padrao-tela-3 " type="text"
                         placeholder="Quantidade de níveis do quizz">
 
                 </div>
@@ -79,56 +79,121 @@
             <!--Inicio da tela "Perguntas do Quiz"-->
             <div class="criar-perguntas formatacao-padrao-tela-3 display-none">
 
-                <p class="paragrafos-tela-3">Crie suas perguntas</p>
+                <p class="descricao-tela">Crie suas perguntas</p>
 
+                <!--Pergunta 1-->
                 <div class="caixa-primeira-pergunta">
 
-                    <p class="paragrafos-tela-3">Pergunta 1</p>
+                    <p class="paragrafos-inputs">Pergunta 1</p>
 
-                    <input class="inputs-padrao-tela-3 texto-da-pergunta marginBottom-tela3" type="text"
-                        placeholder="Texto da pergunta">
+                    <div class="gap-inputs">
 
-                    <input class="inputs-padrao-tela-3 cor-de-fundo-pegunta" type="text"
-                        placeholder="Cor de fundo da pergunta">
+                        <input class="texto-primeira-pergunta- inputs-padrao-tela-3 " type="text"
+                            placeholder="Texto da pergunta">
+
+                        <input class="cor-primeira-pegunta inputs-padrao-tela-3 " type="text"
+                            placeholder="Cor de fundo da pergunta">
+
+                    </div>
+
+                    <p class="paragrafos-inputs">Resposta correta</p>
+
+                    <div class="gap-inputs">
+
+                        <input class="primeira-resposta-correta inputs-padrao-tela-3" type="text"
+                            placeholder="Resposta correta">
+
+                        <input class="primeira-url-correta inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem">
+
+                    </div>
+
+                    <p class="paragrafos-inputs">Respostas incorretas</p>
+
+                    <div class="gap-inputs">
+
+                        <input class="incorreta-um inputs-padrao-tela-3 " type="text"
+                            placeholder="Resposta incorreta 1">
+
+                        <input class="url-incorreta-um inputs-padrao-tela-3" type="text" placeholder="URL da imagem 1">
 
 
-                    <p class="paragrafos-tela-3 paddingTop-tela3">Resposta correta</p>
+                        <input class="incorreta-dois inputs-padrao-tela-3 " type="text"
+                            placeholder="Resposta incorreta 2">
 
-                    <input class="inputs-padrao-tela-3 resposta-correta marginBottom-tela3" type="text"
-                        placeholder="Resposta correta">
-
-                    <input class="inputs-padrao-tela-3 url-correta" type="text" placeholder="URL da imagem">
-
-
-                    <p class="paragrafos-tela-3 paddingTop-tela3">Respostas incorretas</p>
-
-                    <input class="inputs-padrao-tela-3 incorreta-um marginBottom-tela3" type="text"
-                        placeholder="Resposta incorreta 1">
-
-                    <input class="inputs-padrao-tela-3 url-incorreta-um margintBottom32" type="text"
-                        placeholder="URL da imagem 1">
+                        <input class="url-incorreta-dois inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 2">
 
 
-                    <input class="inputs-padrao-tela-3 incorreta-dois marginBottom-tela3" type="text"
-                        placeholder="Resposta incorreta 2">
+                        <input class="incorreta-tres inputs-padrao-tela-3" type="text"
+                            placeholder="Resposta incorreta 3">
 
-                    <input class="inputs-padrao-tela-3 url-incorreta-dois margintBottom32" type="text"
-                        placeholder="URL da imagem 2">
+                        <input class="url-incorreta-tres inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 3">
 
-
-                    <input class="inputs-padrao-tela-3 incorreta-tres marginBottom-tela3" type="text"
-                        placeholder="Resposta incorreta 3">
-
-                    <input class="inputs-padrao-tela-3 url-incorreta-tres" type="text" placeholder="URL da imagem 3">
-
+                    </div>
 
                 </div>
 
-                <div class="caixa-segunda-pergunta">
+                <!--Pergunta 2-->
+                <div class="caixa-segunda-pergunta display-none">
 
-                    <p class="perguntaMinimizada">Pergunta 2</p>
+                    <p class="paragrafos-inputs">Pergunta 2</p>
 
-                    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+                    <div class="gap-inputs">
+
+                        <input class="texto-segunda-pergunta inputs-padrao-tela-3 " type="text"
+                            placeholder="Texto da pergunta">
+
+                        <input class="cor-segunda-pegunta inputs-padrao-tela-3 " type="text"
+                            placeholder="Cor de fundo da pergunta">
+
+                    </div>
+
+                    <p class="paragrafos-inputs">Resposta correta</p>
+
+                    <div class="gap-inputs">
+
+                        <input class="segunda-resposta-correta inputs-padrao-tela-3" type="text"
+                            placeholder="Resposta correta">
+
+                        <input class="segunda-url-correta inputs-padrao-tela-3" type="text" placeholder="URL da imagem">
+
+                    </div>
+
+                    <p class="paragrafos-inputs">Respostas incorretas</p>
+
+                    <div class="gap-inputs">
+
+                        <input class="incorreta-quatro inputs-padrao-tela-3 " type="text"
+                            placeholder="Resposta incorreta 1">
+
+                        <input class="url-incorreta-quatro inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 1">
+
+
+                        <input class="incorreta-cinco inputs-padrao-tela-3 " type="text"
+                            placeholder="Resposta incorreta 2">
+
+                        <input class="url-incorreta-cinco inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 2">
+
+
+                        <input class="incorreta-seis inputs-padrao-tela-3" type="text"
+                            placeholder="Resposta incorreta 3">
+
+                        <input class="url-incorreta-seis inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 3">
+
+                    </div>
+
+                </div>
+
+                <!--Pergunta 2 minimizada-->
+                <div class="box-minimizada">
+                    <p class="pergunta-minimizada">Pergunta 2</p>
+
+                    <svg onclick="editarPergunta(this)" class="editar-pergunta-dois" width="26" height="24"
                         viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
@@ -137,11 +202,67 @@
 
                 </div>
 
-                <div class="caixa-terceira-pergunta">
+                <!--Pergunta 3-->
+                <div class="caixa-terceira-pergunta display-none">
 
-                    <p class="perguntaMinimizada">Pergunta 3</p>
+                    <p class="paragrafos-inputs">Pergunta 3</p>
 
-                    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+                    <div class="gap-inputs">
+
+                        <input class="texto-terceira-pergunta inputs-padrao-tela-3 " type="text"
+                            placeholder="Texto da pergunta">
+
+                        <input class="cor-terceira-pegunta inputs-padrao-tela-3 " type="text"
+                            placeholder="Cor de fundo da pergunta">
+
+                    </div>
+
+                    <p class="paragrafos-inputs">Resposta correta</p>
+
+                    <div class="gap-inputs">
+
+                        <input class="terceira-resposta-correta inputs-padrao-tela-3" type="text"
+                            placeholder="Resposta correta">
+
+                        <input class="terceira-url-correta inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem">
+
+                    </div>
+
+                    <p class="paragrafos-inputs">Respostas incorretas</p>
+
+                    <div class="gap-inputs">
+
+                        <input class="incorreta-sete inputs-padrao-tela-3 " type="text"
+                            placeholder="Resposta incorreta 1">
+
+                        <input class="url-incorreta-sete inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 1">
+
+
+                        <input class="incorreta-oito inputs-padrao-tela-3 " type="text"
+                            placeholder="Resposta incorreta 2">
+
+                        <input class="url-incorreta-oito inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 2">
+
+
+                        <input class="incorreta-nove inputs-padrao-tela-3" type="text"
+                            placeholder="Resposta incorreta 3">
+
+                        <input class="url-incorreta-nove inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem 3">
+
+                    </div>
+
+                </div>
+
+                <!--Pergunta 3 minimizada-->
+                <div class="box-minimizada">
+
+                    <p class="pergunta-minimizada">Pergunta 3</p>
+
+                    <svg onclick="editarPergunta(this)" class="editar-pergunta-tres" width="26" height="24"
                         viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
@@ -159,33 +280,56 @@
             <!--Inicio da tela "Niveis do Quiz"-->
             <div class="criar-niveis formatacao-padrao-tela-3 display-none">
 
-                <p class="paragrafos-tela-3">Agora, decida os níveis</p>
+                <p class="descricao-tela">Agora, decida os níveis</p>
 
+                <!--Nível 1-->
                 <div class="caixa-primeiro-nivel">
 
-                    <div class="pergunta-nivel">
-                        <p class="paragrafos-tela-3">Nível 1</p>
-                    </div>
+                    <p class="paragrafos-inputs">Nível 1</p>
 
-                    <div class="inputs-niveis">
-                        <input class="inputs-padrao-tela-3 titulo-nivel" type="text" placeholder="Título do nível">
+                    <div class="gap-inputs">
 
-                        <input class="inputs-padrao-tela-3 porcentagem-acerto" type="text"
+                        <input class="titulo-nivel-um inputs-padrao-tela-3" type="text" placeholder="Título do nível">
+
+                        <input class="porcentagem-nivel-um inputs-padrao-tela-3" type="text"
                             placeholder="% de acerto mínima">
 
-                        <input class="inputs-padrao-tela-3 url-nivel" type="text" placeholder="URL da imagem do nível">
+                        <input class="url-nivel-um inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem do nível">
 
-                        <input class="inputs-padrao-tela-3 descricao-nivel" type="text"
+                        <input class="descricao-nivel-um inputs-padrao-tela-3" type="text"
                             placeholder="Descrição do nível">
+
                     </div>
-
                 </div>
 
-                <div class="caixa-segundo-nivel">
+                <!--Nível 2-->
+                <div class="caixa-segundo-nivel display-none">
 
-                    <p class="perguntaMinimizada">Nível 2</p>
+                    <p class="paragrafos-inputs">Nível 2</p>
 
-                    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+                    <div class="gap-inputs">
+
+                        <input class="titulo-nivel-dois inputs-padrao-tela-3" type="text" placeholder="Título do nível">
+
+                        <input class="porcentagem-nivel-dois inputs-padrao-tela-3" type="text"
+                            placeholder="% de acerto mínima">
+
+                        <input class="url-nivel-dois inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem do nível">
+
+                        <input class="descricao-nivel-dois inputs-padrao-tela-3" type="text"
+                            placeholder="Descrição do nível">
+
+                    </div>
+                </div>
+
+                <!--Nível 2 minimizado-->
+                <div class="box-minimizada">
+
+                    <p class="pergunta-minimizada">Nível 2</p>
+
+                    <svg onclick="editarPergunta(this)" class="editar-nivel-dois" width="26" height="24"
                         viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
@@ -194,16 +338,39 @@
 
                 </div>
 
-                <div class="caixa-terceiro-nivel ">
+                <!--Nível 3-->
+                <div class="caixa-terceiro-nivel display-none">
 
-                    <p class="perguntaMinimizada">Nível 3</p>
+                    <p class="paragrafos-inputs">Nível 3</p>
 
-                    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+                    <div class="gap-inputs">
+
+                        <input class="titulo-nivel-tres inputs-padrao-tela-3" type="text" placeholder="Título do nível">
+
+                        <input class="porcentagem-nivel-tres inputs-padrao-tela-3" type="text"
+                            placeholder="% de acerto mínima">
+
+                        <input class="url-nivel-tres inputs-padrao-tela-3" type="text"
+                            placeholder="URL da imagem do nível">
+
+                        <input class="descricao-nivel-tres inputs-padrao-tela-3" type="text"
+                            placeholder="Descrição do nível">
+
+                    </div>
+                </div>
+
+                <!--Nível 3 minimizado-->
+                <div class="box-minimizada">
+
+                    <p class="pergunta-minimizada">Nível 3</p>
+
+                    <svg onclick="editarPergunta(this)" class="editar-nivel-tres" width="26" height="24"
                         viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
                             fill="black" />
                     </svg>
+
                 </div>
 
                 <button class="botao-finalizar-quizz" onclick="finalizarQuizz(this)">Finalizar Quizz</button>
@@ -214,7 +381,7 @@
             <!--Inicio da tela "Finalizar Quiz"-->
             <div class="finalizar-quizz formatacao-padrao-tela-3 display-none">
 
-                <p class="paragrafos-tela-3">Seu quizz está pronto!</p>
+                <p class="descricao-tela">Seu quizz está pronto!</p>
 
                 <!--inserir pelo js a imagem do quizz-->
 
