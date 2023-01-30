@@ -3,6 +3,82 @@ var contadorAcertos = 0;
 var contadorRespostas = 0;
 var data;
 
+/*
+// Inputs infos basicas
+
+// Inputs pergunta 1
+const tituloPrimeiraPergunta = document.querySelector('.texto-primeira-pergunta').value;
+const corPrimeiraPergunta = document.querySelector('.cor-primeira-pegunta').value;
+
+// Resposta correta pergunta 1
+const respostaPrimeiraPergunta = document.querySelector('.primeira-resposta-correta').value;
+const urlRespostaPrimeiraPergunta = document.querySelector('.primeira-url-correta').value;
+
+// Respostas incorretas pergunta 1
+const incorreta1 = document.querySelector('.incorreta-um').value;
+const urlIncorreta1 = document.querySelector('.url-incorreta-um').value;
+
+const incorreta2 = document.querySelector('.incorreta-dois').value;
+const urlIncorreta2 = document.querySelector('.url-incorreta-dois').value;
+
+const incorreta3 = document.querySelector('.incorreta-tres').value;
+const urlIncorreta3 = document.querySelector('.url-incorreta-tres').value;
+
+// Inputs pergunta 2
+const tituloSegundaPergunta = document.querySelector('.texto-segunda-pergunta').value;
+const corSegundaPergunta = document.querySelector('.cor-segunda-pegunta').value;
+
+// Resposta correta pergunta 2
+const respostaSegundaPergunta = document.querySelector('.segunda-resposta-correta').value;
+const urlRespostaSegundaPergunta = document.querySelector('.segunda-url-correta').value;
+
+// Respostas incorretas pergunta 2
+const incorreta4 = document.querySelector('.incorreta-quatro').value;
+const urlIncorreta4 = document.querySelector('.url-incorreta-quatro').value;
+
+const incorreta5 = document.querySelector('.incorreta-cinco').value;
+const urlIncorreta5 = document.querySelector('.url-incorreta-cinco').value;
+
+const incorreta6 = document.querySelector('.incorreta-seis').value;
+const urlIncorreta6 = document.querySelector('.url-incorreta-seis').value;
+
+// Inputs pergunta 3
+const tituloTerceiraPergunta = document.querySelector('.texto-terceira-pergunta').value;
+const corTerceiraPergunta = document.querySelector('.cor-terceira-pegunta').value;
+
+// Resposta correta pergunta 2
+const respostaTerceiraPergunta = document.querySelector('.terceira-resposta-correta').value;
+const urlRespostaTerceiraPergunta = document.querySelector('.terceira-url-correta').value;
+
+// Respostas incorretas pergunta 2
+const incorreta7 = document.querySelector('.incorreta-sete').value;
+const urlIncorreta7 = document.querySelector('.url-incorreta-quatro').value;
+
+const incorreta8 = document.querySelector('.incorreta-oito').value;
+const urlIncorreta8 = document.querySelector('.url-incorreta-cinco').value;
+
+const incorreta9 = document.querySelector('.incorreta-nove').value;
+const urlIncorreta9 = document.querySelector('.url-incorreta-seis').value;
+
+// Inputs nivel 1
+const tituloNivel1 = document.querySelector('.titulo-nivel-um').value;
+const porcentagemNivel1 = document.querySelector('.porcentagem-nivel-um').value;
+const urlNivel1 = document.querySelector('.url-nivel-um').value;
+const descricaoNivel1 = document.querySelector('.descricao-nivel-um').value;
+
+//Inputs nivel 2
+const tituloNivel2 = document.querySelector('.titulo-nivel-dois').value;
+const porcentagemNivel2 = document.querySelector('.porcentagem-nivel-dois').value;
+const urlNivel2 = document.querySelector('.url-nivel-dois').value;
+const descricaoNivel2 = document.querySelector('.descricao-nivel-dois').value;
+
+//Inputs nivel 3
+const tituloNivel3 = document.querySelector('.titulo-nivel-tres').value;
+const porcentagemNivel3 = document.querySelector('.porcentagem-nivel-tres').value;
+const urlNivel3 = document.querySelector('.url-nivel-tres').value;
+const descricaoNivel3 = document.querySelector('.descricao-nivel-tres').value;
+*/
+
 function getQuizzes() {
     const quizzes = axios.get(`${url}`);
 
@@ -57,6 +133,7 @@ function openCreateQuizzWindow() {
 
 //Função que avança para tela de criar perguntas
 function prosseguirCriarPerguntas() {
+
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
     telaInfoBasicaQuiz.classList.add('display-none');
 
@@ -120,6 +197,9 @@ function editarTerceiroNivel() {
 
 //Função que avança para tela Finalizar Quizz
 function finalizarQuizz() {
+
+    createQuizz();
+
     const telaCriarNiveis = document.querySelector('.criar-niveis');
     telaCriarNiveis.classList.add('display-none');
 
@@ -136,6 +216,130 @@ function finalizarQuizz() {
     const teceiraNivelMinimizado = document.querySelector('.nivel-tres-minimizado');
     teceiraNivelMinimizado.classList.remove('display-none');
 }
+
+/*let objetoQuizzCriado;
+//Função que recebe os valores dos inputs das infos basicas e cria o objeto predefinido para o servidor
+function createQuizz() {
+
+    objetoQuizzCriado = {
+        title: titulo,
+        image: urlQuizz,
+        questions: [
+            {
+                title: tituloPrimeiraPergunta,
+                color: corPrimeiraPergunta,
+                answers: [
+                    {
+                        text: respostaPrimeiraPergunta,
+                        image: urlRespostaPrimeiraPergunta,
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: incorreta1,
+                        image: urlIncorreta1,
+                        isCorrectAnswer: false
+                    },
+                    {
+                        text: incorreta2,
+                        image: urlIncorreta2,
+                        isCorrectAnswer: false
+                    },
+                    {
+                        text: incorreta3,
+                        image: urlIncorreta3,
+                        isCorrectAnswer: false
+                    }
+                ]
+            },
+            {
+                title: tituloSegundaPergunta,
+                color: corSegundaPergunta,
+                answers: [
+                    {
+                        text: respostaSegundaPergunta,
+                        image: urlRespostaSegundaPergunta,
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: incorreta4,
+                        image: urlIncorreta4,
+                        isCorrectAnswer: false
+                    },
+                    {
+                        text: incorreta5,
+                        image: urlIncorreta5,
+                        isCorrectAnswer: false
+                    },
+                    {
+                        text: incorreta6,
+                        image: urlIncorreta6,
+                        isCorrectAnswer: false
+                    }
+                ]
+            },
+            {
+                title: tituloTerceiraPergunta,
+                color: corTerceiraPergunta,
+                answers: [
+                    {
+                        text: respostaTerceiraPergunta,
+                        image: urlRespostaTerceiraPergunta,
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: incorreta7,
+                        image: urlIncorreta7,
+                        isCorrectAnswer: false
+                    },
+                    {
+                        text: incorreta8,
+                        image: urlIncorreta8,
+                        isCorrectAnswer: false
+                    },
+                    {
+                        text: incorreta9,
+                        image: urlIncorreta9,
+                        isCorrectAnswer: false
+                    }
+                ]
+            }
+        ],
+        levels: [
+            {
+                title: tituloNivel1,
+                image: urlNivel1,
+                text: descricaoNivel1,
+                minValue: porcentagemNivel1
+            },
+            {
+                title: tituloNivel2,
+                image: urlNivel2,
+                text: descricaoNivel2,
+                minValue: porcentagemNivel2
+            },
+            {
+                title: tituloNivel3,
+                image: urlNivel3,
+                text: descricaoNivel3,
+                minValue: porcentagemNivel3
+            }
+        ]
+    }
+
+    const postQuizzCriado = axios.post('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes', objetoQuizzCriado);
+    postQuizzCriado.then(deuBom);
+    postQuizzCriado.catch(deuRuim);
+}
+
+function deuBom(res) {
+    let idQuizzCriado = res.data;
+    console.log(res.data);
+    localStorage.setItem("id", idQuizzCriado);
+}
+
+function deuRuim(err) {
+    console.log(err);
+}*/
 
 function colocaTituloQuizz(quizz) {
     data = null;
@@ -318,10 +522,10 @@ function startLoading() {
     `;
 }
 
-function stopLoading(){
+function stopLoading() {
     const halfASecond = 500;
     setTimeout(() =>
-    document.querySelector('.loading').remove(), halfASecond)
+        document.querySelector('.loading').remove(), halfASecond)
 }
 
 getQuizzes();
