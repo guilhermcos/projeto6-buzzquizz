@@ -2,11 +2,14 @@ const url = 'https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes';
 var contadorAcertos = 0;
 var contadorRespostas = 0;
 var data;
-
+var recemCriado;
+var arrayCriados;
+const objQuizz = { title: [], image: [], questions: [], levels: [] };
+console.log(objQuizz);
 
 // Inputs infos basicas
 
- // Inputs pergunta 1
+// Inputs pergunta 1
 
 /*
 // Resposta correta pergunta 1
@@ -130,7 +133,8 @@ function renderUserQuizzes () {
 }
 
 function getUnicQuizz(id) {
-    console.log(id);
+    document.querySelector('.finalizar-quizz').classList.add('display-none');
+    document.querySelector('.quizz-page').classList.remove('display-none');
     const selectedQuizz = `https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${id}`;
     const promise = axios.get(selectedQuizz);
     promise.then(colocaTituloQuizz);
@@ -164,69 +168,75 @@ function openCreateQuizzWindow() {
 
 //Função que avança para tela de criar perguntas
 function prosseguirCriarPerguntas() {
+    objQuizz.title = document.querySelector('.titulo-quizz').value;
+    objQuizz.image = document.querySelector('.url-quizz').value;
+    perguntas = document.querySelector('.qtde-perguntas-quizz').value;
+    niveis = document.querySelector('.qtde-niveis-quizz').value;
+
+    console.log(objQuizz);
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
     telaInfoBasicaQuiz.classList.add('display-none');
 
     const telaCriarPeguntas = document.querySelector('.criar-perguntas');
     telaCriarPeguntas.classList.remove('display-none');
 
-let pegarQntPerguntas = document.querySelector('.qtde-perguntas-quizz').value;
+    let pegarQntPerguntas = document.querySelector('.qtde-perguntas-quizz').value;
     const documento = document.querySelector('.crie-perguntas');
 
-for (let i = 0; i < pegarQntPerguntas; i++ ){
-    documento.innerHTML += `   
+    for (let i = 0; i < pegarQntPerguntas; i++) {
+        documento.innerHTML += `   
     <div class="container">                
-    <div class="caixa-pergunta ${i+1} display-none">
-    <p class="paragrafos-inputs">Pergunta ${i+1}</p>
-    <div class="gap-inputs">
-        <input class="texto-pergunta inputs-padrao-tela-3 " type="text" required
+        <div class="caixa-pergunta ${i + 1} display-none">
+        <p class="paragrafos-inputs">Pergunta ${i + 1}</p>
+        <div class="gap-inputs">
+            <input class="texto-pergunta inputs-padrao-tela-3 " type="text" required
             minlength="20" title="Mínimo 20 caracteres." placeholder="Texto da pergunta">
 
-        <input class="cor-pegunta inputs-padrao-tela-3 " type="text" required
+            <input class="cor-pergunta inputs-padrao-tela-3 " type="text" required
             pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{6})$"
             title="Digite uma cor em hexadecimal (começar em #, seguida de 6 caracteres hexadecimais, ou seja, números ou letras de A a F)."
             placeholder="Cor de fundo da pergunta">
+        </div>
+        <p class="paragrafos-inputs">Resposta correta</p>
+        <div class="gap-inputs">
+            <input class="resposta-correta inputs-padrao-tela-3" type="text" required
+                placeholder="Resposta correta">
+            <input class="url-correta inputs-padrao-tela-3" type="url" required
+                placeholder="URL da imagem">
+        </div>
+        <p class="paragrafos-inputs">Respostas incorretas</p>
+        <div class="gap-inputs">
+            <input class="incorreta inputs-padrao-tela-3 " type="text" required
+                placeholder="Resposta incorreta 1">
+            <input class="url-incorreta inputs-padrao-tela-3" type="url" required
+                placeholder="URL da imagem 1">
+            <input class="incorreta inputs-padrao-tela-3 " type="text"
+                placeholder="Resposta incorreta 2">
+            <input class="url-incorreta inputs-padrao-tela-3" type="url"
+                placeholder="URL da imagem 2">
+            <input class="incorreta inputs-padrao-tela-3" type="text"
+                placeholder="Resposta incorreta 3">
+            <input class="url-incorreta inputs-padrao-tela-3" type="url"
+                placeholder="URL da imagem 3">
+        </div>
     </div>
-    <p class="paragrafos-inputs">Resposta correta</p>
-    <div class="gap-inputs">
-        <input class="resposta-correta inputs-padrao-tela-3" type="text" required
-            placeholder="Resposta correta">
-        <input class="url-correta inputs-padrao-tela-3" type="url" required
-            placeholder="URL da imagem">
-    </div>
-    <p class="paragrafos-inputs">Respostas incorretas</p>
-    <div class="gap-inputs">
-        <input class="incorreta inputs-padrao-tela-3 " type="text" required
-            placeholder="Resposta incorreta 1">
-        <input class="url-incorreta inputs-padrao-tela-3" type="url" required
-            placeholder="URL da imagem 1">
-        <input class="incorreta inputs-padrao-tela-3 " type="text" required
-            placeholder="Resposta incorreta 2">
-        <input class="url-incorreta inputs-padrao-tela-3" type="url" required
-            placeholder="URL da imagem 2">
-        <input class="incorreta inputs-padrao-tela-3" type="text" required
-            placeholder="Resposta incorreta 3">
-        <input class="url-incorreta inputs-padrao-tela-3" type="url" required
-            placeholder="URL da imagem 3">
-    </div>
-</div>
-<div class="pergunta-minimizada ${i+1} box-minimizada">
-    <p class="pergunta-minimizada">Pergunta ${i+1}</p>
-    <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
-        viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
+    <div class="pergunta-minimizada ${i + 1} box-minimizada">
+        <p class="pergunta-minimizada">Pergunta ${i + 1}</p>
+        <svg onclick="editarPergunta(this)" class="editar-pergunta" width="26" height="24"
+            viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
             d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
             fill="black" />
-    </svg>
-</div>
+        </svg>
+    </div>
 </div>`;
-}
-    documento.innerHTML+= `
+    }
+    documento.innerHTML += `
     <button class="botao-criar-niveis" type="submit">Prosseguir pra criar
     níveis</button>`;
 }
 
-function editarPergunta(clicked){
+function editarPergunta(clicked) {
     const perguntaMinimizada = clicked.parentNode;
     perguntaMinimizada.classList.add('display-none');
     const divPai = perguntaMinimizada.parentNode;
@@ -237,7 +247,7 @@ function editarPergunta(clicked){
 //Função que avança para tela de criar niveis
 function prosseguirCriarNiveis() {
     window.scroll(0, 0,)
-
+    coletarInfoPerguntas();
     const telaCriarPerguntas = document.querySelector('.criar-perguntas');
     telaCriarPerguntas.classList.add('display-none');
 
@@ -248,12 +258,12 @@ function prosseguirCriarNiveis() {
     console.log(qntNiveis);
     const container = document.querySelector('.niveis-quizz');
 
-    for (let j = 0; j < qntNiveis; j++){
+    for (let j = 0; j < qntNiveis; j++) {
         container.innerHTML += `
         <div class="container">
-            <div class="caixa-nivel display-none">
+                        <div class="caixa-nivel display-none">
 
-                            <p class="paragrafos-inputs">Nivel ${j+1}</p>
+                            <p class="paragrafos-inputs">Nivel ${j + 1}</p>
 
                             <div class="gap-inputs">
 
@@ -273,7 +283,7 @@ function prosseguirCriarNiveis() {
                         </div>
                         <div class="nivel-minimizado box-minimizada">
 
-                            <p class="nivel-minimizado">Nível ${j+1}</p>
+                            <p class="nivel-minimizado">Nível ${j + 1}</p>
 
                             <svg onclick="editarNivel(this)" class="editar-nivel" width="26" height="24"
                                 viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -290,8 +300,9 @@ function prosseguirCriarNiveis() {
     `;
 }
 
+
 //Função para editar os niveis do quizz
-function editarNivel(clicked){
+function editarNivel(clicked) {
     const nivelMinimizado = clicked.parentNode;
     nivelMinimizado.classList.add('display-none');
     const divPai = nivelMinimizado.parentNode;
@@ -302,24 +313,105 @@ function editarNivel(clicked){
 //Função que avança para tela Finalizar Quizz
 function finalizarQuizz() {
 
-    createQuizz();
+    criarQuizz();
+    enviarObjServidor();
 
-    const telaCriarNiveis = document.querySelector('.criar-niveis');
-    telaCriarNiveis.classList.add('display-none');
+    //const telaCriarNiveis = document.querySelector('.criar-niveis');
+    //telaCriarNiveis.classList.add('display-none');
 
-    const telaFinalizarQuizz = document.querySelector('.finalizar-quizz');
-    telaFinalizarQuizz.classList.remove('display-none');
+    //const telaFinalizarQuizz = document.querySelector('.finalizar-quizz');
+    //telaFinalizarQuizz.classList.remove('display-none');
+    const telaniveis = document.querySelector('.criar-niveis');
+    telaniveis.classList.add('display-none');
+    const container = document.querySelector('.finalizar-quizz');
+    container.classList.remove('display-none');
+    container.innerHTML = "";
+    container.innerHTML += `
 
-    const caixanNivel = document.querySelector('.caixa-segundo-nivel');
-    caixanNivel.classList.add('display-none');
-    const segundoNivelMinimizado = document.querySelector('.nivel-minimizado');
-    segundoNivelMinimizado.classList.remove('display-none');
+                <p class="descricao-tela">Seu quizz está pronto!</p>
 
-    const caixaTerceiroNivel = document.querySelector('.caixa-terceiro-nivel');
-    caixaTerceiroNivel.classList.add('display-none');
-    const teceiraNivelMinimizado = document.querySelector('.nivel-tres-minimizado');
-    teceiraNivelMinimizado.classList.remove('display-none');
+                <div class="bkg-quizz-pronto" onclick="acessarQuizz(this)">
+                    <img src="${objQuizz.image}" alt="Imagem do quizz criado">
+                    <div class="titulo-quizz-criado">${objQuizz.title}</div>
+                </div>
+
+
+                <button class="botao-acessar-quizz" onclick="getUnicQuizz(recemCriado.data.id)">Acessar Quizz</button>
+
+                <div class="button-voltar" onclick="voltarHome(this)">
+                    <p>Voltar pra home</p>
+                </div>
+    `
+
+    //const caixanNivel = document.querySelector('.caixa-nivel');
+    //caixanNivel.classList.add('display-none');
+    //const segundoNivelMinimizado = document.querySelector('.nivel-minimizado');
+    //segundoNivelMinimizado.classList.add('display-none');
+
+    //const caixaTerceiroNivel = document.querySelector('.caixa-nivel');
+    //caixaTerceiroNivel.classList.add('display-none');
+    //const teceiraNivelMinimizado = document.querySelector('.nivel-tres-minimizado');
+    //teceiraNivelMinimizado.classList.add('display-none');
 }
+
+function enviarObjServidor() {
+    promise = axios.post('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes', objQuizz);
+    promise.then(recebeObj);
+    function recebeObj (obj) {
+        recemCriado = obj;
+        saveInLocalStorage(obj.data);
+    } 
+    promise.catch(err);
+    function err() {
+        alert("Houve um erro");
+    }
+}
+
+function coletarInfoPerguntas() {
+    const qtdPerg = document.querySelectorAll(".caixa-pergunta");
+    console.log(qtdPerg);
+    const arrQuestions = [];
+    for (i = 0; i < qtdPerg.length; i++) {
+        arrQuestions.push({ answers: [] });
+        let titleQuestion = qtdPerg[i].querySelector('.texto-pergunta').value;
+        arrQuestions[i].title = titleQuestion;
+        let colorQuestion = qtdPerg[i].querySelector('.cor-pergunta').value;
+        arrQuestions[i].color = colorQuestion;
+
+        let respCorreta = qtdPerg[i].querySelector('.resposta-correta');
+        let imgCorreta = qtdPerg[i].querySelector('.url-correta');
+        arrQuestions[i].answers.push({ text: respCorreta.value, image: imgCorreta.value, isCorrectAnswer: true });
+
+
+        //const respostas = qtdPerg.querySelectorAll('');
+        let respIncorreta = qtdPerg[i].querySelectorAll('.incorreta');
+        let imgIncorreta = qtdPerg[i].querySelectorAll('.url-incorreta');
+
+        for (let index = 0; index < 3; index++) {
+            if (respIncorreta[index].value != "" && imgIncorreta[index].value != "") {
+                arrQuestions[i].answers.push({ text: respIncorreta[index].value, image: imgIncorreta[index].value, isCorrectAnswer: false });
+            }
+        }
+    }
+
+    objQuizz.questions = arrQuestions;
+}
+
+function criarQuizz() {
+    const containerNivel = document.querySelector('.criar-niveis');
+    const niveisObj = containerNivel.querySelectorAll('.caixa-nivel');
+    levelsObj = [];
+    for (let i = 0; i < niveisObj.length; i++) {
+        let titleLevel = niveisObj[i].querySelector('.titulo-nivel').value;
+        let imageLevel = niveisObj[i].querySelector('.url-nivel').value;
+        let text = niveisObj[i].querySelector('.descricao-nivel').value;
+        let minvalue = Number(niveisObj[i].querySelector('.porcentagem-nivel').value);
+        objQuizz.levels.push({ title: titleLevel, image: imageLevel, text: text, minValue: minvalue });
+    }
+    console.log(objQuizz);
+}
+
+
 
 /*let objetoQuizzCriado;
 //Função que recebe os valores dos inputs das infos basicas e cria o objeto predefinido para o servidor

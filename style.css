@@ -402,6 +402,7 @@ form {
 }
 
 .bkg-quizz-pronto img {
+    width: 100%;
     object-fit: cover;
     position: relative;
 }
