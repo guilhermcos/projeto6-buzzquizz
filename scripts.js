@@ -206,34 +206,12 @@ for (let i = 0; i < pegarQntPerguntas; i++ ){
 }
 
 function editarPergunta(clicked){
-    clicked.classList.add('display-none');
-    //div.classList.add('display-none');
-
     const perguntaMinimizada = clicked.parentNode;
     const divPai = perguntaMinimizada.parentNode;
     const caixaPergunta = divPai.querySelector('.caixa-pergunta');
     caixaPergunta.classList.remove('display-none');
     const div = perguntaMinimizada.classList.add('display-none');
-    console.log(div);
-    console.log(divPai);
-    console.log(caixaPergunta);
     }
-
-//Função para editar as perguntas do quizz
-function editarSegundaPergunta() {
-    const perguntaMinimizada = document.querySelector('.pergunta-minimizada');
-    perguntaMinimizada.classList.add('display-none');
-
-    const caixaPergunta = document.querySelector('.caixa-pergunta');
-    caixaPergunta.classList.remove('display-none');
-}
-function editarTerceiraPergunta() {
-    const perguntaMinimizada = document.querySelector('.pergunta-tres-minimizada');
-    perguntaMinimizada.classList.add('display-none');
-
-    const caixaPergunta = document.querySelector('.caixa-terceira-pergunta');
-    caixaPergunta.classList.remove('display-none');
-}
 
 //Função que avança para tela de criar niveis
 function prosseguirCriarNiveis() {
