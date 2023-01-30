@@ -282,10 +282,8 @@ form {
 
 /* Inicio da tela Criar perguntas */
 
-.caixa-primeiro-nivel,
-.caixa-segundo-nivel,
 .caixa-pergunta,
-.caixa-terceiro-nivel {
+.caixa-nivel {
     background-color: #FFFFFF;
     width: 100%;
     box-shadow: 0px 0px 10px 0px #0000000D;
@@ -333,11 +331,8 @@ form {
     align-items: center;
 }
 
-.editar-pergunta-dois,
-.editar-pergunta-tres,
 .editar-pergunta,
-.editar-nivel-dois,
-.editar-nivel-tres {
+.editar-nivel {
     margin-right: 27px;
     cursor: pointer;
 }
@@ -407,6 +402,7 @@ form {
 }
 
 .bkg-quizz-pronto img {
+    width: 100%;
     object-fit: cover;
     position: relative;
 }
