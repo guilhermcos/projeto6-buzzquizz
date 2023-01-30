@@ -17,8 +17,8 @@ const urlRespostaPrimeiraPergunta = document.querySelector('.primeira-url-corret
 const incorreta1 = document.querySelector('.incorreta-um').value;
 const urlIncorreta1 = document.querySelector('.url-incorreta-um').value;
 
-const incorreta2 = document.querySelector('.incorreta-dois').value;
-const urlIncorreta2 = document.querySelector('.url-incorreta-dois').value;
+const incorreta2 = document.querySelector('.incorreta').value;
+const urlIncorreta2 = document.querySelector('.url-incorreta').value;
 
 const incorreta3 = document.querySelector('.incorreta-tres').value;
 const urlIncorreta3 = document.querySelector('.url-incorreta-tres').value;
@@ -66,10 +66,10 @@ const urlNivel1 = document.querySelector('.url-nivel-um').value;
 const descricaoNivel1 = document.querySelector('.descricao-nivel-um').value;
 
 //Inputs nivel 2
-const tituloNivel2 = document.querySelector('.titulo-nivel-dois').value;
-const porcentagemNivel2 = document.querySelector('.porcentagem-nivel-dois').value;
-const urlNivel2 = document.querySelector('.url-nivel-dois').value;
-const descricaoNivel2 = document.querySelector('.descricao-nivel-dois').value;
+const tituloNivel2 = document.querySelector('.titulo-nivel').value;
+const porcentagemNivel2 = document.querySelector('.porcentagem-nivel').value;
+const urlNivel2 = document.querySelector('.url-nivel').value;
+const descricaoNivel2 = document.querySelector('.descricao-nivel').value;
 
 //Inputs nivel 3
 const tituloNivel3 = document.querySelector('.titulo-nivel-tres').value;
@@ -120,10 +120,6 @@ function openQuizz(selected) {
     openQuizzId.finally(() => stopLoading());
 }
 
-let titulo;
-let urlQuizz;
-let perguntas;
-let niveis;
 function openCreateQuizzWindow() {
     startLoading();
     const homepage = document.querySelector('.home-page');
@@ -135,16 +131,8 @@ function openCreateQuizzWindow() {
 
 }
 
-console.log(titulo, urlQuizz, perguntas, niveis);
-
 //Função que avança para tela de criar perguntas
 function prosseguirCriarPerguntas() {
-    titulo = document.querySelector('.titulo-quizz').value;
-    urlQuizz = document.querySelector('.url-quizz').value;
-    perguntas = document.querySelector('.qtde-perguntas-quizz').value;
-    niveis = document.querySelector('.qtde-niveis-quizz').value;
-
-    console.log(titulo, urlQuizz, perguntas, niveis);
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
     telaInfoBasicaQuiz.classList.add('display-none');
 
@@ -154,7 +142,7 @@ function prosseguirCriarPerguntas() {
 let pegarQntPerguntas = document.querySelector('.qtde-perguntas-quizz').value;
 
 for (let i = 0; i < pegarQntPerguntas; i++ ){
-    const documento = document.querySelector('.euvouvomitar');
+    const documento = document.querySelector('.crie-perguntas');
     documento.innerHTML += `   
     <div class="container">                
     <div class="caixa-pergunta ${i+1} display-none">
@@ -207,11 +195,11 @@ for (let i = 0; i < pegarQntPerguntas; i++ ){
 
 function editarPergunta(clicked){
     const perguntaMinimizada = clicked.parentNode;
+    perguntaMinimizada.classList.add('display-none');
     const divPai = perguntaMinimizada.parentNode;
     const caixaPergunta = divPai.querySelector('.caixa-pergunta');
     caixaPergunta.classList.remove('display-none');
-    const div = perguntaMinimizada.classList.add('display-none');
-    }
+}
 
 //Função que avança para tela de criar niveis
 function prosseguirCriarNiveis() {
@@ -223,30 +211,57 @@ function prosseguirCriarNiveis() {
     const telaCriarNiveis = document.querySelector('.criar-niveis');
     telaCriarNiveis.classList.remove('display-none');
 
-    const caixaPergunta = document.querySelector('.caixa-segunda-pergunta');
-    caixaPergunta.classList.add('display-none');
-    const perguntaMinimizada = document.querySelector('.pergunta-dois-minimizada');
-    perguntaMinimizada.classList.remove('display-none');
+    let qntNiveis = document.querySelector('.qtde-niveis-quizz').value;
+    console.log(qntNiveis);
+    for (let j = 0; j < qntNiveis; j++){
+        const container = document.querySelector('.niveis-quizz');
+        console.log(container);
+        container.innerHTML += `
+        <div class="container">
+            <div class="caixa-nivel display-none">
 
-    const caixaTerceiraPergunta = document.querySelector('.caixa-terceira-pergunta');
-    caixaTerceiraPergunta.classList.add('display-none');
-    const teceiraPerguntaMinimizada = document.querySelector('.pergunta-tres-minimizada');
-    teceiraPerguntaMinimizada.classList.remove('display-none');
+                            <p class="paragrafos-inputs">Nivel ${j+1}</p>
+
+                            <div class="gap-inputs">
+
+                                <input class="titulo-nivel inputs-padrao-tela-3" type="text" required minlength="10"
+                                    title="Mínimo de 10 caracteres." placeholder="Título do nível">
+
+                                <input class="porcentagem-nivel inputs-padrao-tela-3" type="number" required min="0"
+                                    max="100" title="Mínimo 0%" placeholder="% de acerto mínima">
+
+                                <input class="url-nivel inputs-padrao-tela-3" type="url" required
+                                    title="Digite uma URL válida." placeholder="URL da imagem do nível">
+
+                                <input class="descricao-nivel inputs-padrao-tela-3" type="text" required
+                                    title="Mínimo de 30 caracteres." placeholder="Descrição do nível">
+
+                            </div>
+                        </div>
+                        <div class="nivel-minimizado box-minimizada">
+
+                            <p class="nivel-minimizado">Nível ${j+1}</p>
+
+                            <svg onclick="editarNivel(this)" class="editar-nivel" width="26" height="24"
+                                viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.1594 15.4969L19.6038 14.0594C19.8295 13.8348 20.2222 13.992 20.2222 14.3155V20.8471C20.2222 22.0375 19.2517 23.0034 18.0556 23.0034H2.16667C0.970486 23.0034 0 22.0375 0 20.8471V5.03462C0 3.84419 0.970486 2.87837 2.16667 2.87837H14.5122C14.8326 2.87837 14.9951 3.2647 14.7694 3.4938L13.325 4.9313C13.2573 4.99868 13.167 5.03462 13.0677 5.03462H2.16667V20.8471H18.0556V15.7485C18.0556 15.6542 18.0917 15.5643 18.1594 15.4969ZM25.2281 6.43169L13.3747 18.2282L9.2941 18.6774C8.11146 18.8077 7.10486 17.8149 7.23576 16.629L7.68715 12.568L19.5406 0.771533C20.5743 -0.257178 22.2444 -0.257178 23.2736 0.771533L25.2236 2.71216C26.2573 3.74087 26.2573 5.40747 25.2281 6.43169ZM20.7684 7.81978L18.1458 5.20981L9.75903 13.5608L9.42951 16.4942L12.3771 16.1663L20.7684 7.81978ZM23.6934 4.2395L21.7434 2.29888C21.5583 2.1147 21.2559 2.1147 21.0753 2.29888L19.6806 3.68696L22.3031 6.29692L23.6979 4.90884C23.8785 4.72017 23.8785 4.42368 23.6934 4.2395Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+        </div>
+                `;
+    }
+
+
 }
 
 //Função para editar os niveis do quizz
-function editarSegundoNivel() {
-    const nivelMinimizado = document.querySelector('.nivel-dois-minimizado');
+function editarNivel(clicked){
+    const nivelMinimizado = clicked.parentNode;
     nivelMinimizado.classList.add('display-none');
-
-    const caixaNivel = document.querySelector('.caixa-segundo-nivel');
-    caixaNivel.classList.remove('display-none');
-}
-function editarTerceiroNivel() {
-    const nivelMinimizado = document.querySelector('.nivel-tres-minimizado');
-    nivelMinimizado.classList.add('display-none');
-
-    const caixaNivel = document.querySelector('.caixa-terceiro-nivel');
+    const divPai = nivelMinimizado.parentNode;
+    const caixaNivel = divPai.querySelector('.caixa-nivel');
     caixaNivel.classList.remove('display-none');
 }
 
@@ -263,7 +278,7 @@ function finalizarQuizz() {
 
     const caixanNivel = document.querySelector('.caixa-segundo-nivel');
     caixanNivel.classList.add('display-none');
-    const segundoNivelMinimizado = document.querySelector('.nivel-dois-minimizado');
+    const segundoNivelMinimizado = document.querySelector('.nivel-minimizado');
     segundoNivelMinimizado.classList.remove('display-none');
 
     const caixaTerceiroNivel = document.querySelector('.caixa-terceiro-nivel');
