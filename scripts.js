@@ -103,7 +103,6 @@ function checkUserQuizz() {
     const noQuizz = containerQuizzes.querySelector('.create-a-quizz');
     if (userQuizzes.length === 0){
     quizzesUser.classList.add('display-none');
-    noQuizz.classList.remove('display-none');
     } else  if (userQuizzes.length !== 0) {
     listUserQuizz();
     quizzesUser.classList.remove('display-none');
