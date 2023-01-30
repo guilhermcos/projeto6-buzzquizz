@@ -96,6 +96,40 @@ function getQuizzes() {
     })
     quizzes.catch(() => window.location.reload())
 }
+
+function checkUserQuizz() {
+    const containerQuizzes = document.querySelector('.top-part');
+    const quizzesUser = containerQuizzes.querySelector('.user-quizz');
+    const noQuizz = containerQuizzes.querySelector('.create-a-quizz');
+    if (userQuizzes.length === 0){
+    quizzesUser.classList.add('display-none');
+    noQuizz.classList.remove('display-none');
+    } else  if (userQuizzes.length !== 0) {
+    listUserQuizz();
+    quizzesUser.classList.remove('display-none');
+    noQuizz.classList.add('display-none');
+    }
+}
+
+function listUserQuizz() {
+    let userQuizzes = localStorage.getItem('userQuizz');
+    userQuizzes = JSON.parse('userQuizzes');
+    for (let i = 0; i < userQuizzes.length; i++) {
+        renderUserQuizzes();
+    }
+}
+
+function renderUserQuizzes () {
+    const containerUserQuizzes = document.querySelector('.user-quizzes');
+    containerUserQuizzes.innerHTML += `
+    <div id="${userQuizzes[i].id}" class="quizz" onclick="openQuizz(this)">
+    <img src="${userQuizzes[i].image}">
+    <div class="quizz-overlay"></div>
+    <h2>${userQuizzes[i].title}</h2>
+    </div>
+    `;
+}
+
 function getUnicQuizz(id) {
     console.log(id);
     const selectedQuizz = `https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${id}`;
@@ -408,19 +442,14 @@ function deuBom(res) {
 
 }
 
+function deuRuim(err) {
+    console.log(err);
+}*/
+
 function saveInLocalStorage(idUserQuizz) {
     const userQuizzes = JSON.stringify(idUserQuizz);
     const quizzUser = localStorage.setItem("userQuizz", userQuizzes);
 }
-
-function getLocalStorage(){
-    const userQuizzes = localStorage.getItem('userQuizz');
-    const userQuizzesString = JSON.parse('userQuizzes');
-}
-
-function deuRuim(err) {
-    console.log(err);
-}*/
 
 function colocaTituloQuizz(quizz) {
     data = null;
