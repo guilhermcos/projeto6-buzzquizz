@@ -160,34 +160,34 @@ for (let i = 0; i < pegarQntPerguntas; i++ ){
     <div class="caixa-pergunta ${i+1} display-none">
     <p class="paragrafos-inputs">Pergunta ${i+1}</p>
     <div class="gap-inputs">
-        <input class="texto-segunda-pergunta inputs-padrao-tela-3 " type="text" required
+        <input class="texto-pergunta inputs-padrao-tela-3 " type="text" required
             minlength="20" title="Mínimo 20 caracteres." placeholder="Texto da pergunta">
 
-        <input class="cor-segunda-pegunta inputs-padrao-tela-3 " type="text" required
+        <input class="cor-pegunta inputs-padrao-tela-3 " type="text" required
             pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{6})$"
             title="Digite uma cor em hexadecimal (começar em #, seguida de 6 caracteres hexadecimais, ou seja, números ou letras de A a F)."
             placeholder="Cor de fundo da pergunta">
     </div>
     <p class="paragrafos-inputs">Resposta correta</p>
     <div class="gap-inputs">
-        <input class="segunda-resposta-correta inputs-padrao-tela-3" type="text" required
+        <input class="resposta-correta inputs-padrao-tela-3" type="text" required
             placeholder="Resposta correta">
-        <input class="segunda-url-correta inputs-padrao-tela-3" type="url" required
+        <input class="url-correta inputs-padrao-tela-3" type="url" required
             placeholder="URL da imagem">
     </div>
     <p class="paragrafos-inputs">Respostas incorretas</p>
     <div class="gap-inputs">
-        <input class="incorreta-quatro inputs-padrao-tela-3 " type="text" required
+        <input class="incorreta inputs-padrao-tela-3 " type="text" required
             placeholder="Resposta incorreta 1">
-        <input class="url-incorreta-quatro inputs-padrao-tela-3" type="url" required
+        <input class="url-incorreta inputs-padrao-tela-3" type="url" required
             placeholder="URL da imagem 1">
-        <input class="incorreta-cinco inputs-padrao-tela-3 " type="text" required
+        <input class="incorreta inputs-padrao-tela-3 " type="text" required
             placeholder="Resposta incorreta 2">
-        <input class="url-incorreta-cinco inputs-padrao-tela-3" type="url" required
+        <input class="url-incorreta inputs-padrao-tela-3" type="url" required
             placeholder="URL da imagem 2">
-        <input class="incorreta-seis inputs-padrao-tela-3" type="text" required
+        <input class="incorreta inputs-padrao-tela-3" type="text" required
             placeholder="Resposta incorreta 3">
-        <input class="url-incorreta-seis inputs-padrao-tela-3" type="url" required
+        <input class="url-incorreta inputs-padrao-tela-3" type="url" required
             placeholder="URL da imagem 3">
     </div>
 </div>
