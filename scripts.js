@@ -37,15 +37,19 @@ function openQuizz(selected) {
     homepage.classList.add('display-none');
     let tela2 = document.querySelector('.quizz-page');
     tela2.classList.remove('display-none');
+    startLoading();
     const id = selected.getAttribute('id');
     const openQuizzId = axios.get(`${url}/${id}`);
     openQuizzId.then(res => getUnicQuizz(res.data.id));
     openQuizzId.catch(() => window.location.reload())
+    openQuizzId.finally(() => stopLoading());
 }
 
 function openCreateQuizzWindow() {
+    startLoading();
     const homepage = document.querySelector('.home-page');
     homepage.classList.add('display-none');
+    stopLoading();
     const tela3 = document.querySelector('.tela-3').classList.remove('display-none');
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz').classList.remove('display-none');
     //chamar a função da tela 3
@@ -302,6 +306,22 @@ function voltarHome() {
     const tela3 = document.querySelector('.tela-3').classList.add('display-none');
     getQuizzes();
     window.scrollTo(0, 0);
+}
+
+//loading functions
+function startLoading() {
+    const main = document.querySelector('main');
+    main.innerHTML += `
+    <div class="loading">
+        <img src="./img/loading.gif" alt="loading gif">
+    </div>
+    `;
+}
+
+function stopLoading(){
+    const halfASecond = 500;
+    setTimeout(() =>
+    document.querySelector('.loading').remove(), halfASecond)
 }
 
 getQuizzes();

@@ -186,6 +186,18 @@ main {
     color: #fff;
 }
 
+/*loading page*/
+.loading {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    z-index:1;
+    background-color: #fff;
+}    
+
 /*Inicio da tela 3*/
 
 /*Tela 3 : Info basica do quizz*/
