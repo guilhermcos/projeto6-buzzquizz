@@ -2,7 +2,8 @@ const url = 'https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes';
 var contadorAcertos = 0;
 var contadorRespostas = 0;
 var data;
-
+const objQuizz = {title: [], image:[], questions:[], levels:[]};
+console.log(objQuizz);
 
 // Inputs infos basicas
 
@@ -139,12 +140,12 @@ console.log(titulo, urlQuizz, perguntas, niveis);
 
 //Função que avança para tela de criar perguntas
 function prosseguirCriarPerguntas() {
-    titulo = document.querySelector('.titulo-quizz').value;
-    urlQuizz = document.querySelector('.url-quizz').value;
+    objQuizz.title = document.querySelector('.titulo-quizz').value;
+    objQuizz.image = document.querySelector('.url-quizz').value;
     perguntas = document.querySelector('.qtde-perguntas-quizz').value;
     niveis = document.querySelector('.qtde-niveis-quizz').value;
 
-    console.log(titulo, urlQuizz, perguntas, niveis);
+    console.log(objQuizz);
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
     telaInfoBasicaQuiz.classList.add('display-none');
 
