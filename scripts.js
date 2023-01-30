@@ -127,8 +127,6 @@ function openCreateQuizzWindow() {
     stopLoading();
     const tela3 = document.querySelector('.tela-3').classList.remove('display-none');
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz').classList.remove('display-none');
-    //chamar a função da tela 3
-
 }
 
 //Função que avança para tela de criar perguntas
@@ -405,9 +403,19 @@ function createQuizz() {
 }
 
 function deuBom(res) {
-    let idQuizzCriado = res.data;
     console.log(res.data);
-    localStorage.setItem("id", idQuizzCriado);
+    saveInLocalStorage(res.data)
+
+}
+
+function saveInLocalStorage(idUserQuizz) {
+    const userQuizzes = JSON.stringify(idUserQuizz);
+    const quizzUser = localStorage.setItem("userQuizz", userQuizzes);
+}
+
+function getLocalStorage(){
+    const userQuizzes = localStorage.getItem('userQuizz');
+    const userQuizzesString = JSON.parse('userQuizzes');
 }
 
 function deuRuim(err) {
