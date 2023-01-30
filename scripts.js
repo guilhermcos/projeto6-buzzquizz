@@ -140,9 +140,9 @@ function prosseguirCriarPerguntas() {
     telaCriarPeguntas.classList.remove('display-none');
 
 let pegarQntPerguntas = document.querySelector('.qtde-perguntas-quizz').value;
+    const documento = document.querySelector('.crie-perguntas');
 
 for (let i = 0; i < pegarQntPerguntas; i++ ){
-    const documento = document.querySelector('.crie-perguntas');
     documento.innerHTML += `   
     <div class="container">                
     <div class="caixa-pergunta ${i+1} display-none">
@@ -190,7 +190,9 @@ for (let i = 0; i < pegarQntPerguntas; i++ ){
 </div>
 </div>`;
 }
-
+    documento.innerHTML+= `
+    <button class="botao-criar-niveis" type="submit">Prosseguir pra criar
+    níveis</button>`;
 }
 
 function editarPergunta(clicked){
@@ -213,9 +215,9 @@ function prosseguirCriarNiveis() {
 
     let qntNiveis = document.querySelector('.qtde-niveis-quizz').value;
     console.log(qntNiveis);
+    const container = document.querySelector('.niveis-quizz');
+
     for (let j = 0; j < qntNiveis; j++){
-        const container = document.querySelector('.niveis-quizz');
-        console.log(container);
         container.innerHTML += `
         <div class="container">
             <div class="caixa-nivel display-none">
@@ -252,8 +254,9 @@ function prosseguirCriarNiveis() {
         </div>
                 `;
     }
-
-
+    container.innerHTML += `
+    <button class="botao-finalizar-quizz" type="submit">Finalizar Quizz</button>
+    `;
 }
 
 //Função para editar os niveis do quizz
