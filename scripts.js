@@ -360,7 +360,7 @@ function enviarObjServidor() {
     promise.then(recebeObj);
     function recebeObj (obj) {
         recemCriado = obj;
-        saveInLocalStorage(res.data);
+        saveInLocalStorage(obj.data);
     } 
     promise.catch(err);
     function err() {
