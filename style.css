@@ -229,6 +229,10 @@ form {
     align-items: center;
 }
 
+.container {
+    width:100%;
+}
+
 .inputs-infos-basicas {
     background-color: #FFFFFF;
     width: 100%;
@@ -278,11 +282,9 @@ form {
 
 /* Inicio da tela Criar perguntas */
 
-.caixa-primeira-pergunta,
-.caixa-segunda-pergunta,
-.caixa-terceira-pergunta,
 .caixa-primeiro-nivel,
 .caixa-segundo-nivel,
+.caixa-pergunta,
 .caixa-terceiro-nivel {
     background-color: #FFFFFF;
     width: 100%;
@@ -333,6 +335,7 @@ form {
 
 .editar-pergunta-dois,
 .editar-pergunta-tres,
+.editar-pergunta,
 .editar-nivel-dois,
 .editar-nivel-tres {
     margin-right: 27px;
