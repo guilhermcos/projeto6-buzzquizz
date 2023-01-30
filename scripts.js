@@ -121,6 +121,10 @@ function openQuizz(selected) {
     openQuizzId.finally(() => stopLoading());
 }
 
+let titulo;
+let urlQuizz;
+let perguntas;
+let niveis;
 function openCreateQuizzWindow() {
     startLoading();
     const homepage = document.querySelector('.home-page');
@@ -129,10 +133,19 @@ function openCreateQuizzWindow() {
     const tela3 = document.querySelector('.tela-3').classList.remove('display-none');
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz').classList.remove('display-none');
     //chamar a função da tela 3
+
 }
+
+console.log(titulo, urlQuizz, perguntas, niveis);
 
 //Função que avança para tela de criar perguntas
 function prosseguirCriarPerguntas() {
+    titulo = document.querySelector('.titulo-quizz').value;
+    urlQuizz = document.querySelector('.url-quizz').value;
+    perguntas = document.querySelector('.qtde-perguntas-quizz').value;
+    niveis = document.querySelector('.qtde-niveis-quizz').value;
+
+    console.log(titulo, urlQuizz, perguntas, niveis);
 
     const telaInfoBasicaQuiz = document.querySelector('.info-basica-quiz');
     telaInfoBasicaQuiz.classList.add('display-none');
